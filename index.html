@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ofertas Amazon - 12/08/2025</title>
+    <title>Boasve - Ofertas Imperdíveis Amazon</title>
     <style>
         * {
             margin: 0;
@@ -12,265 +12,275 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Arial', sans-serif;
             line-height: 1.6;
+            color: #333;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
-            padding: 20px;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #FF6B35, #FF8E53);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(255,107,53,0.3);
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
         }
         
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            overflow: hidden;
-        }
-        
-        .header {
-            background: linear-gradient(135deg, #ff9a56 0%, #ff6b6b 100%);
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        
-        .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .header p {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-        
-        .content {
-            padding: 40px;
+            padding: 2rem 1rem;
         }
         
         .category {
-            margin-bottom: 50px;
-        }
-        
-        .category-title {
-            color: #333;
-            font-size: 1.8em;
-            margin-bottom: 25px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #ff6b6b;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 25px;
-        }
-        
-        .product-card {
             background: white;
             border-radius: 15px;
-            padding: 25px;
+            padding: 2rem;
+            margin-bottom: 2rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+            transition: transform 0.3s ease;
         }
         
-        .product-card:hover {
+        .category:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
-            border-color: #ff6b6b;
         }
         
-        .product-title {
-            color: #333;
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 15px;
+        .category h2 {
+            color: #FF6B35;
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 0.5rem;
         }
         
-        .btn-amazon {
+        .offer-item {
+            background: #f8f9fa;
+            border: 2px solid #e9ecef;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .offer-item:hover {
+            border-color: #FF6B35;
+            box-shadow: 0 5px 15px rgba(255,107,53,0.2);
+        }
+        
+        .offer-item h3 {
+            color: #495057;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .offer-link {
             display: inline-block;
-            background: linear-gradient(135deg, #ff9a56 0%, #ff6b6b 100%);
+            background: linear-gradient(135deg, #FF6B35, #FF8E53);
             color: white;
             text-decoration: none;
-            padding: 12px 25px;
+            padding: 0.8rem 1.5rem;
             border-radius: 25px;
             font-weight: bold;
-            text-align: center;
             transition: all 0.3s ease;
-            box-shadow: 0 5px 15px rgba(255,107,107,0.3);
+            margin-top: 0.5rem;
         }
         
-        .btn-amazon:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 25px rgba(255,107,107,0.4);
+        .offer-link:hover {
+            background: linear-gradient(135deg, #e55a2b, #e6794a);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255,107,53,0.4);
+        }
+        
+        .disclaimer {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 2rem 0;
+            text-align: center;
+            color: #856404;
         }
         
         .footer {
-            background: #333;
+            background: #2c3e50;
             color: white;
             text-align: center;
-            padding: 30px;
-            margin-top: 40px;
+            padding: 2rem;
+            margin-top: 3rem;
         }
         
         @media (max-width: 768px) {
             .header h1 {
-                font-size: 2em;
+                font-size: 2rem;
             }
             
-            .content {
-                padding: 20px;
+            .container {
+                padding: 1rem;
             }
             
-            .product-grid {
-                grid-template-columns: 1fr;
+            .category {
+                padding: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
+    <div class="header">
+        <h1>🔥 Ofertas Imperdíveis Amazon</h1>
+        <div class="subtitle">13 de Agosto de 2025 - Ofertas Selecionadas</div>
+    </div>
+
     <div class="container">
-        <div class="header">
-            <h1>🔥 Ofertas Imperdíveis Amazon</h1>
-            <p>12 de Agosto de 2025 - Ofertas Selecionadas</p>
-        </div>
         
-        <div class="content">
-            <!-- Eletrônicos -->
-            <div class="category">
-                <h2 class="category-title">📱 Eletrônicos</h2>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <h3 class="product-title">🔌 I2GO Carregador Portátil (Power Bank)</h3>
-                        <a href="https://www.amazon.com.br/Carregador-Port%C3%A1til-I2GO-10000mAh-Sa%C3%ADdas/dp/B094YS5TDH?th=1&linkCode=ll1&tag=vidasustent01-20&linkId=fde5d1fea7943774a1160dfd9f11a4d2&language=pt_BR&ref_=as_li_ss_tl" class="btn-amazon" target="_blank">Ver Oferta na Amazon</a>
-                    </div>
-                    
-                    <div class="product-card">
-                        <h3 class="product-title">📽️ Basike Mini Projetor Portátil</h3>
-                        <a href="https://www.amazon.com.br/Basike-Trapez%C3%B3ide-Horizontal-90%C2%B0Gir%C3%A1vel-Telesc%C3%B3pico/dp/B0DNF5CT6K?th=1&linkCode=ll1&tag=vidasustent01-20&linkId=basike001&language=pt_BR&ref_=as_li_ss_tl" class="btn-amazon" target="_blank">Ver Oferta na Amazon</a>
-                    </div>
-                    
-                    <div class="product-card">
-                        <h3 class="product-title">⌨️ Combo Teclado e Mouse HP Ergonômico sem fio</h3>
-                        <a href="https://www.amazon.com.br/HP-Teclado-Sem-Mouse-Preto/dp/B0CVNMR68Z?linkCode=ll1&tag=vidasustent01-20&linkId=hp001&language=pt_BR&ref_=as_li_ss_tl" class="btn-amazon" target="_blank">Ver Oferta na Amazon</a>
-                    </div>
-                </div>
+        <div class="category">
+            <h2>📱 Eletrônicos</h2>
+            
+            <div class="offer-item">
+                <h3>👉 Eletrônicos Favoritos dos Influencers 🎧🔌</h3>
+                <a href="https://www.amazon.com.br/b?node=206537851011&linkCode=ll2&tag=vidasustent01-20&linkId=05b473836b94410a61686d97d7d22d0b&language=pt_BR&ref_=as_li_ss_tl" class="offer-link" target="_blank">Ver Ofertas</a>
             </div>
-
-            <!-- Alimentos e Bebidas -->
-            <div class="category">
-                <h2 class="category-title">🥛 Alimentos e Bebidas</h2>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <h3 class="product-title">🥛 Ofertas em Nutridrink</h3>
-                        <a href="https://www.amazon.com.br/s?i=grocery&hidden-keywords=B08Y1Z25MG%7CB0D4NN2W72%7CB07M73V8JD%7CB092BQNYZL%7CB07MLKYJKM%7CB07MLMFD9H%7CB0D292HCS7%7CB07MLM8B5V%7CB07WZV5W6M%7CB07MFFRD7C%7CB07WZV56DM%7CB07M73VQ77%7CB07MJ234Z5%7CB084GYLCYK%7CB09DDL4323%7CB084GYQT83%7CB09LPNLZ1S%7CB07MFFR6PV%7CB07MFZV3D1%7CB098F5CNQX%7CB08GLDWSCV%7CB092BKVQVS%7CB0C6BTXMQR%7CB084GXWGBF%7CB07M7PVSLD%7CB07Y38ZM6P%7CB08CZKJCJ2%7CB09DDJJPGV%7CB08GLHFG7R%7CB092BXQSBW%7CB07MFZV48Q%7CB07MFZTVM4%7CB0C69WPGB4%7CB07Y28QPKX%7CB07MSM7WNJ%7CB07H5R148G%7CB08GLGVRF9%7CB09CSQ8T56%7CB07M7PX6Q3%7CB08ZJS7G6F%7CB07M7PVKZ4%7CB09CSQR4WY%7CB08GLJZPQN%7CB07MQG5J5S%7CB07MSKVPDW%7CB09LQ5H5FW%7CB07MSMRJGJ%7CB098F2CWJ4%7CB08ZJTPJGS%7CB07MSLDNY6%7CB08GLLSCQF%7CB08GLKWSWP%7CB07MFZW5YZ%7CB07MLLJQQP%7CB07MLLPMJH%7CB07MFZTXSP&_encoding=UTF8&linkCode=ll2&tag=vidasustent01-20&linkId=nutridrink001&language=pt_BR&ref_=as_li_ss_tl" class="btn-amazon" target="_blank">Ver Ofertas na Amazon</a>
-                    </div>
-                    
-                    <div class="product-card">
-                        <h3 class="product-title">🍫 Toblerone Chocolate Ao Leite</h3>
-                        <a href="https://www.amazon.com.br/Chocolate-Leite-Nougat-Am%C3%AAndoas-Toblerone/dp/B08566Y4Q9?linkCode=ll1&tag=vidasustent01-20&linkId=toblerone001&language=pt_BR&ref_=as_li_ss_tl" class="btn-amazon" target="_blank">Ver Oferta na Amazon</a>
-                    </div>
-                    
-                    <div class="product-card">
-                        <h3 class="product-title">💪 Piracanjuba ProForce 15g de Proteínas (12 unidades)</h3>
-                        <a href="https://www.amazon.com.br/Pack-Lactose-Chocolate-Piracanjuba-250ml/dp/B0D26YTP11?linkCode=ll1&tag=vidasustent01-20&linkId=piracanjuba001&language=pt_BR&ref_=as_li_ss_tl" class="btn-amazon" target="_blank">Ver Oferta na Amazon</a>
-                    </div>
-                </div>
+            
+            <div class="offer-item">
+                <h3>👉 Ofertas em Celulares e Acessórios 📱</h3>
+                <a href="https://www.amazon.com.br/gp/goldbox?discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%255C%2522departments%255C%2522%253A%255B%255C%252216209063011%252F16243803011%255C%2522%255D%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522&linkCode=ll2&tag=vidasustent01-20&linkId=celular123&language=pt_BR&ref_=as_li_ss_tl" class="offer-link" target="_blank">Ver Ofertas</a>
             </div>
-
-            <!-- Casa e Cozinha -->
-            <div class="category">
-                <h2 class="category-title">🏠 Casa e Cozinha</h2>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <h3 class="product-title">☕ Cafeteira Expressa Mondial - Experiência Barista</h3>
-                        <a href="https://www.amazon.com.br/dp/B0F38SX57L/?th=1&linkCode=ll1&tag=vidasustent01-20&linkId=mondial001&language=pt_BR&ref_=as_li_ss_tl" class="btn-amazon" target="_blank">Ver Oferta na Amazon</a>
-                    </div>
-                    
-                    <div class="product-card">
-                        <h3 class="product-title">🏠 Ofertas para sua Casa</h3>
-                        <a href="https://www.amazon.com.br/deals?ref_=nav_cs_gb&discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%255C%2522departments%255C%2522%253A%255B%255C%252216191001011%255C%2522%255D%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522&linkCode=ll2&tag=vidasustent01-20&linkId=casa001&language=pt_BR&ref_=as_li_ss_tl" class="btn-amazon" target="_blank">Ver Ofertas na Amazon</a>
-                    </div>
-                    
-                    <div class="product-card">
-                        <h3 class="product-title">👨‍🍳 Melhores Ofertas para sua Cozinha</h3>
-                        <a href="https://www.amazon.com.br/deals?ref_=nav_cs_gb&discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%255C%2522departments%255C%2522%253A%255B%255C%252216957126011%255C%2522%255D%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522&linkCode=ll2&tag=vidasustent01-20&linkId=cozinha001&language=pt_BR&ref_=as_li_ss_tl" class="btn-amazon" target="_blank">Ver Ofertas na Amazon</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Livros -->
-            <div class="category">
-                <h2 class="category-title">📚 Livros</h2>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <h3 class="product-title">📖 Contos de Fadas dos Irmãos Grimm</h3>
-                        <a href="https://www.amazon.com.br/Contos-Fadas-Hans-Christian-Andersen/dp/B08F719CQM?linkCode=ll1&tag=vidasustent01-20&linkId=contos001&language=pt_BR&ref_=as_li_ss_tl" class="btn-amazon" target="_blank">Ver Oferta na Amazon</a>
-                    </div>
-                    
-                    <div class="product-card">
-                        <h3 class="product-title">🥕 O Grande Rabanete</h3>
-                        <a href="https://www.amazon.com.br/Grande-Rabanete-Tatiana-Belinky/dp/8516105865?linkCode=ll1&tag=vidasustent01-20&linkId=rabanete001&language=pt_BR&ref_=as_li_ss_tl" class="btn-amazon" target="_blank">Ver Oferta na Amazon</a>
-                    </div>
-                    
-                    <div class="product-card">
-                        <h3 class="product-title">❤️ É assim que começa (Vol. 2 É assim que acaba)</h3>
-                        <a href="https://www.amazon.com.br/assim-que-come%C3%A7a-Vol-acaba-ebook/dp/B0BDSB3YLP?linkCode=ll1&tag=vidasustent01-20&linkId=assim001&language=pt_BR&ref_=as_li_ss_tl" class="btn-amazon" target="_blank">Ver Oferta na Amazon</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Brinquedos -->
-            <div class="category">
-                <h2 class="category-title">🧸 Ofertas Divertidas</h2>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <h3 class="product-title">🎮 Ofertas Prime em Brinquedos e Jogos</h3>
-                        <a href="https://www.amazon.com.br/deals?ref_=nav_cs_gb&discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%255C%2522departments%255C%2522%253A%255B%255C%252216194300011%255C%2522%255D%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522&bubble-id=PrimeOnly&linkCode=ll2&tag=vidasustent01-20&linkId=brinquedos001&language=pt_BR&ref_=as_li_ss_tl" class="btn-amazon" target="_blank">Ver Ofertas na Amazon</a>
-                    </div>
-                    
-                    <div class="product-card">
-                        <h3 class="product-title">🧱 Ofertas em Blocos de Montar</h3>
-                        <a href="https://www.amazon.com.br/s?rh=n%3A16746738011%2Cp_n_deal_type%3A23565492011&dc&qid=1755001623&rnid=23565491011&ref=sr_nr_p_n_deal_type_0&linkCode=ll2&tag=vidasustent01-20&linkId=blocos001&language=pt_BR&ref_=as_li_ss_tl" class="btn-amazon" target="_blank">Ver Ofertas na Amazon</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Moda -->
-            <div class="category">
-                <h2 class="category-title">👕 Moda</h2>
-                <div class="product-grid">
-                    <div class="product-card">
-                        <h3 class="product-title">🧳 Mala Jacki Design (10% de desconto)</h3>
-                        <a href="https://www.amazon.com.br/promotion/psp/AGJWMZRIF0I06?ref=clp_pc_cart_collapse&linkCode=ll2&tag=vidasustent01-20&linkId=jacki001&language=pt_BR&ref_=as_li_ss_tl" class="btn-amazon" target="_blank">Ver Oferta na Amazon</a>
-                    </div>
-                    
-                    <div class="product-card">
-                        <h3 class="product-title">🩲 Kit 9 Cuecas Boxer Reebok</h3>
-                        <a href="https://www.amazon.com.br/Reebok-Masculinas-Microfibra-Costura-Regular/dp/B0D6Z3CVLN?th=1&psc=1&linkCode=ll1&tag=vidasustent01-20&linkId=reebok001&language=pt_BR&ref_=as_li_ss_tl" class="btn-amazon" target="_blank">Ver Oferta na Amazon</a>
-                    </div>
-                    
-                    <div class="product-card">
-                        <h3 class="product-title">👝 Kit com 3 Necessaires Transparentes</h3>
-                        <a href="https://www.amazon.com.br/Necessaire-Transparente-Organizador-Maquiagem-Mala-Vende/dp/B0CV4JNXKQ?th=1&linkCode=ll1&tag=vidasustent01-20&linkId=necessaire001&language=pt_BR&ref_=as_li_ss_tl" class="btn-amazon" target="_blank">Ver Oferta na Amazon</a>
-                    </div>
-                </div>
+            
+            <div class="offer-item">
+                <h3>👉 Ofertas dos Mais Amados em Eletrônicos ⌨️</h3>
+                <a href="https://www.amazon.com.br/b?node=204547342011&pd_rd_w=loX1t&content-id=amzn1.sym.aeef08e8-c36b-4ecb-8356-8305d8d725ba&pf_rd_p=aeef08e8-c36b-4ecb-8356-8305d8d725ba&pf_rd_r=C8VJKN9QFD321Y8V63TE&pd_rd_wg=0KQxP&pd_rd_r=3d0ea686-3e31-47ad-b371-498a15691bc0&ref_=cml-compact-visual-nav-hp&enabledRefinements=%5B%7B%22rid%22%3A%22p_n_deal_type%22%2C%22value%22%3A%2223565492011%22%2C%22ridType%22%3A%22SEARCH_SHORT_ID%22%2C%22type%22%3A%22BROWSE_NODE%22%7D%5D&linkCode=ll2&tag=vidasustent01-20&linkId=amados123&language=pt_BR" class="offer-link" target="_blank">Ver Ofertas</a>
             </div>
         </div>
-        
-        <div class="footer">
-            <p>📅 Ofertas válidas para o dia 12/08/2025 | 🛒 Associado Amazon</p>
-            <p>⚠️ Preços e disponibilidade podem variar</p>
+
+        <div class="category">
+            <h2>👶 Bebê</h2>
+            
+            <div class="offer-item">
+                <h3>👉 Kit com 2 Cremes Pomada de Assadura 120gr - Bepantol</h3>
+                <a href="https://www.amazon.com.br/Cremes-Pomada-Assadura-120gr-Cada/dp/B0BHXK7J1B?linkCode=ll1&tag=vidasustent01-20&linkId=bepantol123&language=pt_BR&ref_=as_li_ss_tl" class="offer-link" target="_blank">Ver Oferta</a>
+            </div>
+            
+            <div class="offer-item">
+                <h3>👉 Toalha de banho com capuz, Mami Bichus</h3>
+                <a href="https://www.amazon.com.br/Toalha-Forrada-Bordado-Papi-90cmx80cm/dp/B07N27VDM1?th=1&linkCode=ll1&tag=vidasustent01-20&linkId=toalha123&language=pt_BR&ref_=as_li_ss_tl" class="offer-link" target="_blank">Ver Oferta</a>
+            </div>
+            
+            <div class="offer-item">
+                <h3>👉 Jogo de Talheres Infantil, Tramontina 🍴</h3>
+                <a href="https://www.amazon.com.br/Talheres-Infantil-Tramontina-Lirous-Colorido/dp/B097KK54NL?linkCode=ll1&tag=vidasustent01-20&linkId=talher123&language=pt_BR&ref_=as_li_ss_tl" class="offer-link" target="_blank">Ver Oferta</a>
+            </div>
         </div>
+
+        <div class="category">
+            <h2>🏠 Casa e Cozinha</h2>
+            
+            <div class="offer-item">
+                <h3>👉 Aproveite as ofertas em Eletrodomésticos</h3>
+                <a href="https://www.amazon.com.br/deals?ref_=nav_cs_gb&bubble-id=deals-collection-eletro&linkCode=ll2&tag=vidasustent01-20&linkId=eletro123&language=pt_BR" class="offer-link" target="_blank">Ver Ofertas</a>
+            </div>
+            
+            <div class="offer-item">
+                <h3>👉 Os queridinhos da limpeza, aproveite</h3>
+                <a href="https://www.amazon.com.br/s?hidden-keywords=B09Z68GWC7%7CB07Q7TB1TZ%7CB08R9XTH39%7CB08KTPQ6YC%7CB0DCZYWC2J%7CB0DCZXVFZT%7CB095D66LPY%7CB0CKKSJXM6%7CB0CKFHYNH7%7CB07P5FHQGQ%7CB07DTVN39B%7CB07DTNB6SY%7CB0CC69NJRJ%7CB0C2R9DDPJ%7CB08KGQYGZT%7CB07B9ZZLBB%7CB08BFJL163%7CB07DTN9XW1%7CB07P56Z2QV%7CB095D6JBVS%7CB08KHZ2GQS%7CB08KHZ3LGH%7CB08KHZKNMC%7CB08KHZ2DBF%7CB08GQDYLC5%7CB08GQDV2B9%7CB08GQD615Y%7CB091WDM4FK%7CB09SX9RG1G%7CB09SX95DGY%7CB07QKPH9KH%7CB0CJG18XKM%7CB0CJFYHJL8%7CB07RGQZ799%7CB091W9FN9N%7CB07QK7SBV9%7CB07QDT9YYR%7CB08BCSWYJJ%7CB0CBCRP3BS%7CB07Q4FXBR5%7CB076FMJDMC%7CB08D372MSK%7CB08BJNQ9MZ%7CB08JM8CG5D%7CB0CJJZPLDQ%7CB0CKFTVTKB%7CB07DTLS9M7%7CB07DVM8YHQ%7CB07DTLSF61%7CB07P5FG93P%7CB07QC96145%7CB07DV1YKGM%7CB0DVZNFDBS%7CB0DCWBW94W%7CB0D6CV1P49%7CB07QCVG94Q%7CB0959773SL%7CB07ZHFM7JK%7CB08XPWK8C5%7CB0DCW9YLTJ&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3CNMFK0H9MN05&sprefix=limpeza&linkCode=ll2&tag=vidasustent01-20&linkId=limpeza123&language=pt_BR" class="offer-link" target="_blank">Ver Ofertas</a>
+            </div>
+            
+            <div class="offer-item">
+                <h3>👉 Kit 7 Recipientes de acrílico para armazenamento</h3>
+                <a href="https://www.amazon.com.br/Kit-Recipiente-armazenamento-alimentos-recipiente/dp/B0FD3C585J?th=1&linkCode=ll1&tag=vidasustent01-20&linkId=recipiente123&language=pt_BR&ref_=as_li_ss_tl" class="offer-link" target="_blank">Ver Oferta</a>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>📚 Livros</h2>
+            
+            <div class="offer-item">
+                <h3>👉 Até 45% off em HQs e Mangás - Semana dos Quadrinhos</h3>
+                <a href="https://www.amazon.com.br/b?node=7842710011&linkCode=ll2&tag=vidasustent01-20&linkId=manga123&language=pt_BR&ref_=as_li_ss_tl" class="offer-link" target="_blank">Ver Ofertas</a>
+            </div>
+            
+            <div class="offer-item">
+                <h3>👉 Tempestade de ônix</h3>
+                <a href="https://www.amazon.com.br/Tempestade-%C3%B4nix-Sequ%C3%AAncia-fen%C3%B4menos-Empyriano-ebook/dp/B0DJMGZ915?linkCode=ll1&tag=vidasustent01-20&linkId=tempestade123&language=pt_BR&ref_=as_li_ss_tl" class="offer-link" target="_blank">Ver Oferta</a>
+            </div>
+            
+            <div class="offer-item">
+                <h3>👉 Água fresca para as flores</h3>
+                <a href="https://www.amazon.com.br/%C3%81gua-fresca-para-as-flores-ebook/dp/B09SGRBT7Z?linkCode=ll1&tag=vidasustent01-20&linkId=agua123&language=pt_BR&ref_=as_li_ss_tl" class="offer-link" target="_blank">Ver Oferta</a>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>💪 Esporte</h2>
+            
+            <div class="offer-item">
+                <h3>👉 Ofertas até 70% off em Esportes e Aventura</h3>
+                <a href="https://www.amazon.com.br/deals?ref_=nav_cs_gb&bubble-id=deals-collection-sports&linkCode=ll2&tag=vidasustent01-20&linkId=esporte123&language=pt_BR" class="offer-link" target="_blank">Ver Ofertas</a>
+            </div>
+            
+            <div class="offer-item">
+                <h3>👉 Mikasa Bola de Vôlei de Quadra Oficial 🏐</h3>
+                <a href="https://www.amazon.com.br/Mikasa-v%C3%B4lei-V360W-tamanho-oficial/dp/B0CLTSRYQW?th=1&linkCode=ll1&tag=vidasustent01-20&linkId=volei123&language=pt_BR&ref_=as_li_ss_tl" class="offer-link" target="_blank">Ver Oferta</a>
+            </div>
+            
+            <div class="offer-item">
+                <h3>👉 Dream Fitness Esteira Eletrônica, bivolt</h3>
+                <a href="https://www.amazon.com.br/Esteira-Ergom%C3%A9trica-Dream-Concept-2-1/dp/B07FSZ19DP?linkCode=ll1&tag=vidasustent01-20&linkId=esteira123&language=pt_BR&ref_=as_li_ss_tl" class="offer-link" target="_blank">Ver Oferta</a>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>👚 Moda</h2>
+            
+            <div class="offer-item">
+                <h3>👉 Novidades em Moda na Amazon</h3>
+                <a href="https://www.amazon.com.br/b?node=207834018011&linkCode=ll2&tag=vidasustent01-20&linkId=moda123&language=pt_BR&ref_=as_li_ss_tl" class="offer-link" target="_blank">Ver Ofertas</a>
+            </div>
+            
+            <div class="offer-item">
+                <h3>👉 Confira tudo em Moda Inverno 🧣🧤</h3>
+                <a href="https://www.amazon.com.br/b/ref=wt23_moda_2?pf_rd_r=C677498767254664AB49&pf_rd_p=d8cda362-5066-4d3a-89f0-1513850d6a5a&pf_rd_m=A1ZZFT5FULY4LN&pf_rd_s=merchandised-search-5_CW&pf_rd_t=&pf_rd_i=17365811011&ie=UTF8&node=207880276011&linkCode=ll2&tag=vidasustent01-20&linkId=inverno123&language=pt_BR" class="offer-link" target="_blank">Ver Ofertas</a>
+            </div>
+            
+            <div class="offer-item">
+                <h3>👉 Mais Amados em Moda</h3>
+                <a href="https://www.amazon.com.br/b?node=204547364011&linkCode=ll2&tag=vidasustent01-20&linkId=amadomoda123&language=pt_BR&ref_=as_li_ss_tl" class="offer-link" target="_blank">Ver Ofertas</a>
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>🎯 Mais Destaques</h2>
+            
+            <div class="offer-item">
+                <h3>👉 Confira as ofertas em itens automotivos 🚗</h3>
+                <a href="https://www.amazon.com.br/deals?ref_=nav_cs_gb&bubble-id=deals-collection-automotive&linkCode=ll2&tag=vidasustent01-20&linkId=auto123&language=pt_BR" class="offer-link" target="_blank">Ver Ofertas</a>
+            </div>
+            
+            <div class="offer-item">
+                <h3>👉 Ofertas em CD e Vinil 🎶</h3>
+                <a href="https://www.amazon.com.br/gp/goldbox?discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%255C%2522departments%255C%2522%253A%255B%255C%25227791938011%255C%2522%255D%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522&linkCode=ll2&tag=vidasustent01-20&linkId=musica123&language=pt_BR" class="offer-link" target="_blank">Ver Ofertas</a>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <strong>📢 Aviso Legal:</strong> Como Associado da Amazon, eu ganho com compras qualificadas. Os preços podem variar sem aviso prévio.
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>&copy; 2025 Boasve.com.br - Ofertas Selecionadas Amazon</p>
+        <p>Última atualização: 13 de Agosto de 2025</p>
     </div>
 </body>
 </html>
