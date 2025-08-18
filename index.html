@@ -1,525 +1,774 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ofertas Imperdíveis Amazon - 18/08/2025</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-
-        header {
-            text-align: center;
-            padding: 40px 0;
-            color: white;
-            margin-bottom: 30px;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-
-        header p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
-        .category {
-            background: white;
-            border-radius: 15px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .category:hover {
-            transform: translateY(-5px);
-        }
-
-        .category h2 {
-            color: #2c3e50;
-            font-size: 1.8rem;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #3498db;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .offers-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-        }
-
-        .offer-card {
-            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
-            border-radius: 12px;
-            padding: 20px;
-            text-decoration: none;
-            color: #2c3e50;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .offer-card:hover {
-            transform: scale(1.05);
-            border-color: #3498db;
-            box-shadow: 0 15px 35px rgba(52, 152, 219, 0.3);
-        }
-
-        .offer-card::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
-            transform: rotate(45deg);
-            transition: all 0.6s;
-            opacity: 0;
-        }
-
-        .offer-card:hover::before {
-            animation: shine 0.6s ease-in-out;
-        }
-
-        @keyframes shine {
-            0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); opacity: 0; }
-            50% { opacity: 1; }
-            100% { transform: translateX(100%) translateY(100%) rotate(45deg); opacity: 0; }
-        }
-
-        .offer-title {
-            font-weight: bold;
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
-
-        .offer-emoji {
-            font-size: 1.5rem;
-            margin-right: 8px;
-        }
-
-        .offer-description {
-            font-size: 0.9rem;
-            opacity: 0.8;
-            margin-bottom: 15px;
-        }
-
-        .cta-button {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 12px 24px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-        }
-
-        .cta-button:hover {
-            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
-        }
-
-        .highlight {
-            background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
-        }
-
-        .beauty { background: linear-gradient(135deg, #fd79a8 0%, #fdcb6e 100%); }
-        .electronics { background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%); }
-        .books { background: linear-gradient(135deg, #00b894 0%, #00cec9 100%); }
-        .games { background: linear-gradient(135deg, #e84393 0%, #fd79a8 100%); }
-        .fashion { background: linear-gradient(135deg, #fdcb6e 0%, #e84393 100%); }
-        .home { background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); }
-
-        .date-badge {
-            background: rgba(255,255,255,0.2);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin-bottom: 20px;
-            display: inline-block;
-            backdrop-filter: blur(10px);
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 0;
-            color: white;
-            opacity: 0.8;
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-            
-            header h1 {
-                font-size: 2rem;
-            }
-            
-            .category {
-                padding: 20px;
-            }
-            
-            .offers-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .special-offer {
-            border: 3px solid #e74c3c;
-            box-shadow: 0 0 20px rgba(231, 76, 60, 0.3);
-        }
-
-        .discount-badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: #e74c3c;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: bold;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ofertas e Serviços Amazon | Vida Sustentável</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+header {
+  text-align: center;
+  padding: 40px 0;
+  color: white;
+  margin-bottom: 30px;
+}
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+.category {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+.category:hover {
+  transform: translateY(-5px);
+}
+.category h2 {
+  color: #2c3e50;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #3498db;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.offers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+.offer-card {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 50%, #fecfef 100%);
+  border-radius: 12px;
+  padding: 20px;
+  text-decoration: none;
+  color: #2c3e50;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+.offer-card:hover {
+  transform: scale(1.05);
+  border-color: #3498db;
+  box-shadow: 0 15px 35px rgba(52, 152, 219, 0.3);
+}
+.offer-card::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+  transform: rotate(45deg);
+  transition: all 0.6s;
+  opacity: 0;
+}
+.offer-card:hover::before {
+  animation: shine 0.6s ease-in-out;
+}
+@keyframes shine {
+  0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateX(100%) translateY(100%) rotate(45deg); opacity: 0; }
+}
+.offer-title {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+.offer-emoji {
+  font-size: 1.5rem;
+  margin-right: 8px;
+}
+.offer-description {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  margin-bottom: 15px;
+}
+.cta-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+.cta-button:hover {
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+.highlight {
+  background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+}
+.beauty { background: linear-gradient(135deg, #fd79a8 0%, #fdcb6e 100%); }
+.electronics { background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%); }
+.books { background: linear-gradient(135deg, #00b894 0%, #00cec9 100%); }
+.games { background: linear-gradient(135deg, #e84393 0%, #fd79a8 100%); }
+.fashion { background: linear-gradient(135deg, #fdcb6e 0%, #e84393 100%); }
+.home { background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%); }
+.date-badge {
+  background: rgba(255,255,255,0.2);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  display: inline-block;
+  backdrop-filter: blur(10px);
+}
+footer {
+  text-align: center;
+  padding: 40px 0;
+  color: white;
+  opacity: 0.8;
+}
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  .category {
+    padding: 20px;
+  }
+  .offers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+.special-offer {
+  border: 3px solid #e74c3c;
+  box-shadow: 0 0 20px rgba(231, 76, 60, 0.3);
+}
+.discount-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #e74c3c;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+/* Styles from the second file */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+.hero h1 {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+.hero p {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 600px;
+  margin: 0 auto 30px;
+}
+.cta-button {
+  display: inline-block;
+  background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+  color: white;
+  padding: 15px 40px;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin: 40px 0;
+}
+.service-card {
+  background: white;
+  border-radius: 15px;
+  padding: 30px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+}
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+.service-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: block;
+}
+.service-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #2c3e50;
+}
+.service-card p {
+  color: #666;
+  margin-bottom: 20px;
+}
+.service-benefits {
+  list-style: none;
+  margin-bottom: 25px;
+}
+.service-benefits li {
+  padding: 5px 0;
+  color: #555;
+  position: relative;
+  padding-left: 20px;
+}
+.service-benefits li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #27ae60;
+  font-weight: bold;
+}
+.service-link {
+  display: inline-block;
+  background: linear-gradient(45deg, #3498db, #2980b9);
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+.service-link:hover {
+  background: linear-gradient(45deg, #2980b9, #3498db);
+  transform: scale(1.05);
+}
+.urgency-banner {
+  background: linear-gradient(45deg, #e74c3c, #c0392b);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 40px 0;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+.testimonials {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 40px;
+  margin: 40px 0;
+  text-align: center;
+}
+.testimonial {
+  max-width: 600px;
+  margin: 0 auto;
+  color: white;
+}
+.testimonial blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.testimonial cite {
+  font-weight: bold;
+  opacity: 0.9;
+}
+.footer {
+  text-align: center;
+  padding: 40px 20px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.social-links {
+  margin: 20px 0;
+}
+.social-links a {
+  display: inline-block;
+  margin: 0 10px;
+  color: white;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+}
+.social-links a:hover {
+  transform: scale(1.2);
+  color: #ff6b6b;
+}
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 1.1rem;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <div class="date-badge">18/08/2025</div>
-            <h1>🛍️ Ofertas Imperdíveis Amazon</h1>
-            <p>Promoções exclusivas selecionadas para você!</p>
-        </header>
-
-        <!-- Escritório e Papelaria -->
-        <div class="category">
-            <h2>🏢 Escritório e Papelaria</h2>
-            <div class="offers-grid">
-                <a href="https://www.amazon.com.br/b?ie=UTF8&node=211000230011&linkCode=ll2&tag=vidasustent01-20&linkId=19c046061f7a51671ea868b1bca901f7&language=pt_BR&ref_=as_li_ss_tl" class="offer-card highlight" target="_blank">
-                    <div class="offer-title">
-                        <span class="offer-emoji">🎧📺</span>
-                        Semana do Home Office
-                    </div>
-                    <div class="offer-description">
-                        Equipamentos essenciais para seu escritório em casa
-                    </div>
-                    <div class="cta-button">Ver Ofertas</div>
-                </a>
-
-                <a href="https://www.amazon.com.br/promotion/psp/A3M9DX5UIVEXOX?redirectAsin=B0BHLH6PGD&redirectMerchantId=A1ZZFT5FULY4LN&linkCode=ll2&tag=vidasustent01-20&linkId=97ed296962bb6bf363763dda5cbfc191&language=pt_BR&ref_=as_li_ss_tl" class="offer-card special-offer" target="_blank">
-                    <div class="discount-badge">15% OFF</div>
-                    <div class="offer-title">
-                        <span class="offer-emoji">🖊️✍🏻</span>
-                        Compre R$ 50 em Papelaria
-                    </div>
-                    <div class="offer-description">
-                        Ganhe 15% de desconto em produtos de papelaria
-                    </div>
-                    <div class="cta-button">Aproveitar</div>
-                </a>
-            </div>
-        </div>
-
-        <!-- Beleza -->
-        <div class="category">
-            <h2>💄 Beleza</h2>
-            <div class="offers-grid">
-                <a href="https://www.amazon.com.br/promotion/psp/A36U9HI8C54H9V?redirectAsin=B0BLBZVVW7&redirectMerchantId=A1ZZFT5FULY4LN&linkCode=ll2&tag=vidasustent01-20&linkId=683ed3c31a837d79221174ffbec025ec&language=pt_BR&ref_=as_li_ss_tl" class="offer-card beauty special-offer" target="_blank">
-                    <div class="discount-badge">15% OFF</div>
-                    <div class="offer-title">
-                        <span class="offer-emoji">💄🧴</span>
-                        Maybelline R$89.90
-                    </div>
-                    <div class="offer-description">
-                        Compre R$89.90 em Maybelline e leve 15% off
-                    </div>
-                    <div class="cta-button">Comprar</div>
-                </a>
-
-                <a href="https://www.amazon.com.br/promotion/psp/A1XDD3DOR44KWO?redirectAsin=B0DTLKJZ3F&redirectMerchantId=A1ZZFT5FULY4LN&linkCode=ll2&tag=vidasustent01-20&linkId=41c9729b7bc90d33eb7eaad2fb127114&language=pt_BR&ref_=as_li_ss_tl" class="offer-card beauty" target="_blank">
-                    <div class="offer-title">
-                        <span class="offer-emoji">🧴</span>
-                        Produtos Avène
-                    </div>
-                    <div class="offer-description">
-                        Seleção especial de produtos Avène para cuidados com a pele
-                    </div>
-                    <div class="cta-button">Ver Seleção</div>
-                </a>
-
-                <a href="https://www.amazon.com.br/Protein-Isolado-Puravida-Chocolate-L%C3%ADngua/dp/B0FD53PYKV?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1ZEFNUJUJZZJF&dib=eyJ2IjoiMSJ9.WSWk_z5ZinAoMD6TD0XELJyc07obCSg_A69AJLV4kPk.UaTwkM1KtZNk1IkD6dI2BzC_Y8bhpygJ3fQyDOM3PJk&dib_tag=se&keywords=lingua+de+gato+whey&m=A1ZZFT5FULY4LN&qid=1754681624&refinements=p_6%3AA1ZZFT5FULY4LN&rnid=15137643011&sprefix=lingua+de+gato+whe%2Caps%2C276&sr=8-1&ufe=app_do%3Aamzn1.fos.fcd6d665-32ba-4479-9f21-b774e276a678&linkCode=ll1&tag=vidasustent01-20&linkId=c14c3ddeda34beb2c3ac36c67d8d2c01&language=pt_BR&ref_=as_li_ss_tl" class="offer-card beauty" target="_blank">
-                    <div class="offer-title">
-                        <span class="offer-emoji">🏋🏻‍♀️</span>
-                        Whey Língua de Gato Puravida
-                    </div>
-                    <div class="offer-description">
-                        Whey protein isolado sabor chocolate língua de gato
-                    </div>
-                    <div class="cta-button">Experimentar</div>
-                </a>
-            </div>
-        </div>
-
-        <!-- Eletrônicos -->
-        <div class="category">
-            <h2>📱 Eletrônicos</h2>
-            <div class="offers-grid">
-                <a href="https://www.amazon.com.br/stores/DellTechnologies/page/8B7EFE33-901D-4833-910E-817D634F9CAF?&linkCode=ll2&tag=vidasustent01-20&linkId=b2efa3f19963eba610fd3f3024bb2053&language=pt_BR&ref_=as_li_ss_tl" class="offer-card electronics" target="_blank">
-                    <div class="offer-title">
-                        <span class="offer-emoji">💻</span>
-                        Computadores Dell
-                    </div>
-                    <div class="offer-description">
-                        Descubra seu estilo de jogo com os computadores Dell
-                    </div>
-                    <div class="cta-button">Explorar</div>
-                </a>
-
-                <a href="https://www.amazon.com.br/Celular-Samsung-Galaxy-Tripla-Frontal/dp/B0DNRDZCY4?th=1&linkCode=ll1&tag=vidasustent01-20&linkId=39dcaac3a458e35c33ab3b80f4325b2b&language=pt_BR&ref_=as_li_ss_tl" class="offer-card electronics highlight" target="_blank">
-                    <div class="offer-title">
-                        <span class="offer-emoji">📱</span>
-                        Samsung Galaxy S24 FE 5G
-                    </div>
-                    <div class="offer-description">
-                        Celular Samsung Galaxy S24 FE 5G 256GB
-                    </div>
-                    <div class="cta-button">Comprar</div>
-                </a>
-            </div>
-        </div>
-
-        <!-- Livros -->
-        <div class="category">
-            <h2>📚 Livros</h2>
-            <div class="offers-grid">
-                <a href="https://www.amazon.com.br/Cl%C3%A1ssicos-G%C3%B3ticos-Bram-Stoker/dp/B08F6TXQ24?&linkCode=ll1&tag=vidasustent01-20&linkId=2a87eeecd047ff55e9d48567bafe8c45&language=pt_BR&ref_=as_li_ss_tl" class="offer-card books" target="_blank">
-                    <div class="offer-title">
-                        <span class="offer-emoji">📙</span>
-                        Clássicos Góticos
-                    </div>
-                    <div class="offer-description">
-                        Coletânea com os melhores clássicos da literatura gótica
-                    </div>
-                    <div class="cta-button">Ler Agora</div>
-                </a>
-
-                <a href="https://www.amazon.com.br/Acolhendo-sua-crian%C3%A7a-interior-abordagem/dp/6555643552?&linkCode=ll1&tag=vidasustent01-20&linkId=df541544d41b6f82acbe6e148e1c7359&language=pt_BR&ref_=as_li_ss_tl" class="offer-card books" target="_blank">
-                    <div class="offer-title">
-                        <span class="offer-emoji">📙</span>
-                        Acolhendo sua Criança Interior
-                    </div>
-                    <div class="offer-description">
-                        Uma abordagem inovadora para o autoconhecimento
-                    </div>
-                    <div class="cta-button">Descobrir</div>
-                </a>
-
-                <a href="https://www.amazon.com.br/Em-rota-colis%C3%A3o-Bal-Khabra/dp/658534877X?&linkCode=ll1&tag=vidasustent01-20&linkId=301acc23439ca8f14471640165735dc6&language=pt_BR&ref_=as_li_ss_tl" class="offer-card books" target="_blank">
-                    <div class="offer-title">
-                        <span class="offer-emoji">📙</span>
-                        Em Rota de Colisão
-                    </div>
-                    <div class="offer-description">
-                        Romance contemporâneo de Bal Khabra
-                    </div>
-                    <div class="cta-button">Adquirir</div>
-                </a>
-            </div>
-        </div>
-
-        <!-- Jogos e Brinquedos -->
-        <div class="category">
-            <h2>🎮 Jogos e Brinquedos</h2>
-            <div class="offers-grid">
-                <a href="https://www.amazon.com.br/promotion/psp/A1CWP435ZUACMT?&linkCode=ll2&tag=vidasustent01-20&linkId=8eac876a7eff7d35113ce0238acaffd6&language=pt_BR&ref_=as_li_ss_tl" class="offer-card games special-offer" target="_blank">
-                    <div class="discount-badge">20% OFF</div>
-                    <div class="offer-title">
-                        <span class="offer-emoji">🎲🎴</span>
-                        Compre R$ 100 em Jogos
-                    </div>
-                    <div class="offer-description">
-                        Leve 20% off em jogos acima de R$ 100
-                    </div>
-                    <div class="cta-button">Jogar</div>
-                </a>
-
-                <a href="https://www.amazon.com.br/promotion/psp/AICJTC78Q72X6?&linkCode=ll2&tag=vidasustent01-20&linkId=18b87f7bde4c77073bc8b4128ca34ff2&language=pt_BR&ref_=as_li_ss_tl" class="offer-card games special-offer" target="_blank">
-                    <div class="discount-badge">20% OFF</div>
-                    <div class="offer-title">
-                        <span class="offer-emoji">🧩</span>
-                        Quebra-cabeças
-                    </div>
-                    <div class="offer-description">
-                        20% off acima de R$ 100 em quebra-cabeças
-                    </div>
-                    <div class="cta-button">Montar</div>
-                </a>
-
-                <a href="https://www.amazon.com.br/b?node=204661977011&pd_rd_w=QJ6qw&content-id=amzn1.sym.aeef08e8-c36b-4ecb-8356-8305d8d725ba&pf_rd_p=aeef08e8-c36b-4ecb-8356-8305d8d725ba&pf_rd_r=Z7ZE15ATWRSC3SNHQB09&pd_rd_wg=taxBJ&pd_rd_r=4c435e9b-bfe3-44c4-9381-2b1155ed4a67&enabledRefinements=%5B%7B%22rid%22%3A%22p_n_deal_type%22%2C%22value%22%3A%2223565492011%22%2C%22ridType%22%3A%22SEARCH_SHORT_ID%22%2C%22type%22%3A%22BROWSE_NODE%22%7D%5D&linkCode=ll2&tag=vidasustent01-20&linkId=b48e6dace008f347ce41978e71f7c4c6&language=pt_BR&ref_=as_li_ss_tl" class="offer-card games" target="_blank">
-                    <div class="offer-title">
-                        <span class="offer-emoji">🎴</span>
-                        Mais Amados em Brinquedos
-                    </div>
-                    <div class="offer-description">
-                        Ofertas mais amadas em brinquedos e jogos
-                    </div>
-                    <div class="cta-button">Descobrir</div>
-                </a>
-            </div>
-        </div>
-
-        <!-- Moda -->
-        <div class="category">
-            <h2>👗 Moda</h2>
-            <div class="offers-grid">
-                <a href="https://www.amazon.com.br/promotion/psp/A1Q0DJM6OA3SQ?&linkCode=ll2&tag=vidasustent01-20&linkId=49c23ac20cc9c749483fcd66d946fcde&language=pt_BR&ref_=as_li_ss_tl" class="offer-card fashion special-offer" target="_blank">
-                    <div class="discount-badge">15% OFF</div>
-                    <div class="offer-title">
-                        <span class="offer-emoji">👟</span>
-                        Tênis e Chuteiras
-                    </div>
-                    <div class="offer-description">
-                        Até 15% off em tênis e chuteiras
-                    </div>
-                    <div class="cta-button">Calçar</div>
-                </a>
-
-                <a href="https://www.amazon.com.br/s?i=merchant-items&me=A2ZGOFM2VWDQXR&rh=p_n_deal_type%3A23565493011&dc=&ds=v1%3AJ%2F%2BjvWOMsE%2Bv10U%2Ft9ej5dvOwfnfeMLy1pHeen2%2BHrw&marketplaceID=A2Q3Y263D00KWC&qid=1754921404&rnid=23565491011&linkCode=ll2&tag=vidasustent01-20&linkId=cf432e8ca3cb2b266a88a28fb01b7a9e&language=pt_BR&ref_=as_li_ss_tl" class="offer-card fashion special-offer" target="_blank">
-                    <div class="discount-badge">25% OFF</div>
-                    <div class="offer-title">
-                        <span class="offer-emoji">👚👖</span>
-                        Desconto Hering
-                    </div>
-                    <div class="offer-description">
-                        Até 25% off em roupas Hering
-                    </div>
-                    <div class="cta-button">Vestir</div>
-                </a>
-            </div>
-        </div>
-
-        <!-- Casa -->
-        <div class="category">
-            <h2>🏠 Casa</h2>
-            <div class="offers-grid">
-                <a href="https://www.amazon.com.br/E10-aspirador-carpetes-autonomia-antiqueda/dp/B0FCS1ZBG4?th=1&linkCode=ll1&tag=vidasustent01-20&linkId=edf325dabe4bf503091fa02b51eae1f8&language=pt_BR&ref_=as_li_ss_tl" class="offer-card home special-offer" target="_blank">
-                    <div class="discount-badge">R$ 200 OFF</div>
-                    <div class="offer-title">
-                        <span class="offer-emoji">🧹</span>
-                        Robô Aspirador
-                    </div>
-                    <div class="offer-description">
-                        Cupom de R$ 200 off em robô aspirador
-                    </div>
-                    <div class="cta-button">Limpar</div>
-                </a>
-
-                <a href="https://www.amazon.com.br/dp/B08FK5YNJ1?th=1&linkCode=ll1&tag=vidasustent01-20&linkId=d4d54b135a317d3e258bf00248acea9b&language=pt_BR&ref_=as_li_ss_tl" class="offer-card home" target="_blank">
-                    <div class="offer-title">
-                        <span class="offer-emoji">🛀</span>
-                        Toalha Buddemeyer
-                    </div>
-                    <div class="offer-description">
-                        Oferta especial em toalhas Buddemeyer
-                    </div>
-                    <div class="cta-button">Secar</div>
-                </a>
-
-                <a href="https://www.amazon.com.br/dp/B0C6NGSD6V?th=1&linkCode=ll1&tag=vidasustent01-20&linkId=491c7c0a1c460ffff49b9fe80156125a&language=pt_BR&ref_=as_li_ss_tl" class="offer-card home" target="_blank">
-                    <div class="offer-title">
-                        <span class="offer-emoji">🥤</span>
-                        Copo Térmico Contigo
-                    </div>
-                    <div class="offer-description">
-                        Desconto especial em copo térmico Contigo
-                    </div>
-                    <div class="cta-button">Beber</div>
-                </a>
-            </div>
-        </div>
-
-        <footer>
-            <p>✨ Ofertas válidas por tempo limitado • Links de afiliado Amazon ✨</p>
-            <p>🛍️ Aproveite as melhores ofertas da Amazon Brasil 🛍️</p>
-        </footer>
-    </div>
-
-    <script>
-        // Adicionar efeito de scroll suave
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Adicionar animação de entrada
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.category').forEach(category => {
-            category.style.opacity = '0';
-            category.style.transform = 'translateY(50px)';
-            category.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(category);
-        });
-
-        // Analytics para cliques (opcional)
-        document.querySelectorAll('.offer-card').forEach(card => {
-            card.addEventListener('click', function() {
-                // Aqui você pode adicionar código de analytics se necessário
-                console.log('Clique na oferta:', this.querySelector('.offer-title').textContent.trim());
-            });
-        });
-    </script>
+<div class="container">
+<header>
+<div class="date-badge">18/08/2025</div>
+<h1> 🛍️  Ofertas Imperdíveis Amazon</h1>
+<p>Promoções exclusivas selecionadas para você!</p>
+</header>
+<div class="category">
+<h2> 🏢  Escritório e Papelaria</h2>
+<div class="offers-grid">
+<a href="https://www.amazon.com.br/b?ie=UTF8&node=211000230011&linkCode=ll2&tag=vidasustent01-20&linkId=19c046061f7a51671ea868b1bca901f7&language=pt_BR&ref_=as_li_ss_tl" class="offer-card highlight" target="_blank">
+<div class="offer-title">
+<span class="offer-emoji"> 🎧📺 </span>
+Semana do Home Office
+</div>
+<div class="offer-description">
+Equipamentos essenciais para seu escritório em casa
+</div>
+<div class="cta-button">Ver Ofertas</div>
+</a>
+<a href="https://www.amazon.com.br/promotion/psp/A3M9DX5UIVEXOX?redirectAsin=B0BHLH6PGD&redirectMerchantId=A1ZZFT5FULY4LN&linkCode=ll2&tag=vidasustent01-20&linkId=97ed296962bb6bf363763dda5cbfc191&language=pt_BR&ref_=as_li_ss_tl" class="offer-card special-offer" target="_blank">
+<div class="discount-badge">15% OFF</div>
+<div class="offer-title">
+<span class="offer-emoji"> 🖊️ ✍ 🏻 </span>
+Compre R$ 50 em Papelaria
+</div>
+<div class="offer-description">
+Ganhe 15% de desconto em produtos de papelaria
+</div>
+<div class="cta-button">Aproveitar</div>
+</a>
+</div>
+</div>
+<div class="category">
+<h2> 💄  Beleza</h2>
+<div class="offers-grid">
+<a href="https://www.amazon.com.br/promotion/psp/A36U9HI8C54H9V?redirectAsin=B0BLBZVVW7&redirectMerchantId=A1ZZFT5FULY4LN&linkCode=ll2&tag=vidasustent01-20&linkId=683ed3c31a837d79221174ffbec025ec&language=pt_BR&ref_=as_li_ss_tl" class="offer-card beauty special-offer" target="_blank">
+<div class="discount-badge">15% OFF</div>
+<div class="offer-title">
+<span class="offer-emoji"> 💄🧴 </span>
+Maybelline R$89.90
+</div>
+<div class="offer-description">
+Compre R$89.90 em Maybelline e leve 15% off
+</div>
+<div class="cta-button">Comprar</div>
+</a>
+<a href="https://www.amazon.com.br/promotion/psp/A1XDD3DOR44KWO?redirectAsin=B0DTLKJZ3F&redirectMerchantId=A1ZZFT5FULY4LN&linkCode=ll2&tag=vidasustent01-20&linkId=41c9729b7bc90d33eb7eaad2fb127114&language=pt_BR&ref_=as_li_ss_tl" class="offer-card beauty" target="_blank">
+<div class="offer-title">
+<span class="offer-emoji"> 🧴 </span>
+Produtos Avène
+</div>
+<div class="offer-description">
+Seleção especial de produtos Avène para cuidados com a pele
+</div>
+<div class="cta-button">Ver Seleção</div>
+</a>
+<a href="https://www.amazon.com.br/Protein-Isolado-Puravida-Chocolate-L%C3%ADngua/dp/B0FD53PYKV?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1ZEFNUJUJZZJF&dib=eyJ2IjoiMSJ9.WSWk_z5ZinAoMD6TD0XELJyc07obCSg_A69AJLV4kPk.UaTwkM1KtZNk1IkD6dI2BzC_Y8bhpygJ3fQyDOM3PJk&dib_tag=se&keywords=lingua+de+gato+whey&m=A1ZZFT5FULY4LN&qid=1754681624&refinements=p_6%3AA1ZZFT5FULY4LN&rnid=15137643011&sprefix=lingua+de+gato+whe%2Caps%2C276&sr=8-1&ufe=app_do%3Aamzn1.fos.fcd6d665-32ba-4479-9f21-b774e276a678&linkCode=ll1&tag=vidasustent01-20&linkId=c14c3ddeda34beb2c3ac36c67d8d2c01&language=pt_BR&ref_=as_li_ss_tl" class="offer-card beauty" target="_blank">
+<div class="offer-title">
+<span class="offer-emoji"> 🏋🏻 ‍ ♀️ </span>
+Whey Língua de Gato Puravida
+</div>
+<div class="offer-description">
+Whey protein isolado sabor chocolate língua de gato
+</div>
+<div class="cta-button">Experimentar</div>
+</a>
+</div>
+</div>
+<div class="category">
+<h2> 📱  Eletrônicos</h2>
+<div class="offers-grid">
+<a href="https://www.amazon.com.br/stores/DellTechnologies/page/8B7EFE33-901D-4833-910E-817D634F9CAF?&linkCode=ll2&tag=vidasustent01-20&linkId=b2efa3f19963eba610fd3f3024bb2053&language=pt_BR&ref_=as_li_ss_tl" class="offer-card electronics" target="_blank">
+<div class="offer-title">
+<span class="offer-emoji"> 💻 </span>
+Computadores Dell
+</div>
+<div class="offer-description">
+Descubra seu estilo de jogo com os computadores Dell
+</div>
+<div class="cta-button">Explorar</div>
+</a>
+<a href="https://www.amazon.com.br/Celular-Samsung-Galaxy-Tripla-Frontal/dp/B0DNRDZCY4?th=1&linkCode=ll1&tag=vidasustent01-20&linkId=39dcaac3a458e35c33ab3b80f4325b2b&language=pt_BR&ref_=as_li_ss_tl" class="offer-card electronics highlight" target="_blank">
+<div class="offer-title">
+<span class="offer-emoji"> 📱 </span>
+Samsung Galaxy S24 FE 5G
+</div>
+<div class="offer-description">
+Celular Samsung Galaxy S24 FE 5G 256GB
+</div>
+<div class="cta-button">Comprar</div>
+</a>
+</div>
+</div>
+<div class="category">
+<h2> 📚  Livros</h2>
+<div class="offers-grid">
+<a href="https://www.amazon.com.br/Cl%C3%A1ssicos-G%C3%B3ticos-Bram-Stoker/dp/B08F6TXQ24?&linkCode=ll1&tag=vidasustent01-20&linkId=2a87eeecd047ff55e9d48567bafe8c45&language=pt_BR&ref_=as_li_ss_tl" class="offer-card books" target="_blank">
+<div class="offer-title">
+<span class="offer-emoji"> 📙 </span>
+Clássicos Góticos
+</div>
+<div class="offer-description">
+Coletânea com os melhores clássicos da literatura gótica
+</div>
+<div class="cta-button">Ler Agora</div>
+</a>
+<a href="https://www.amazon.com.br/Acolhendo-sua-crian%C3%A7a-interior-abordagem/dp/6555643552?&linkCode=ll1&tag=vidasustent01-20&linkId=df541544d41b6f82acbe6e148e1c7359&language=pt_BR&ref_=as_li_ss_tl" class="offer-card books" target="_blank">
+<div class="offer-title">
+<span class="offer-emoji"> 📙 </span>
+Acolhendo sua Criança Interior
+</div>
+<div class="offer-description">
+Uma abordagem inovadora para o autoconhecimento
+</div>
+<div class="cta-button">Descobrir</div>
+</a>
+<a href="https://www.amazon.com.br/Em-rota-colis%C3%A3o-Bal-Khabra/dp/658534877X?&linkCode=ll1&tag=vidasustent01-20&linkId=301acc23439ca8f14471640165735dc6&language=pt_BR&ref_=as_li_ss_tl" class="offer-card books" target="_blank">
+<div class="offer-title">
+<span class="offer-emoji"> 📙 </span>
+Em Rota de Colisão
+</div>
+<div class="offer-description">
+Romance contemporâneo de Bal Khabra
+</div>
+<div class="cta-button">Adquirir</div>
+</a>
+</div>
+</div>
+<div class="category">
+<h2> 🎮  Jogos e Brinquedos</h2>
+<div class="offers-grid">
+<a href="https://www.amazon.com.br/promotion/psp/A1CWP435ZUACMT?&linkCode=ll2&tag=vidasustent01-20&linkId=8eac876a7eff7d35113ce0238acaffd6&language=pt_BR&ref_=as_li_ss_tl" class="offer-card games special-offer" target="_blank">
+<div class="discount-badge">20% OFF</div>
+<div class="offer-title">
+<span class="offer-emoji"> 🎲🎴 </span>
+Compre R$ 100 em Jogos
+</div>
+<div class="offer-description">
+Leve 20% off em jogos acima de R$ 100
+</div>
+<div class="cta-button">Jogar</div>
+</a>
+<a href="https://www.amazon.com.br/promotion/psp/AICJTC78Q72X6?&linkCode=ll2&tag=vidasustent01-20&linkId=18b87f7bde4c77073bc8b4128ca34ff2&language=pt_BR&ref_=as_li_ss_tl" class="offer-card games special-offer" target="_blank">
+<div class="discount-badge">20% OFF</div>
+<div class="offer-title">
+<span class="offer-emoji"> 🧩 </span>
+Quebra-cabeças
+</div>
+<div class="offer-description">
+20% off acima de R$ 100 em quebra-cabeças
+</div>
+<div class="cta-button">Montar</div>
+</a>
+<a href="https://www.amazon.com.br/b?node=204661977011&pd_rd_w=QJ6qw&content-id=amzn1.sym.aeef08e8-c36b-4ecb-8356-8305d8d725ba&pf_rd_p=aeef08e8-c36b-4ecb-8356-8305d8d725ba&pf_rd_r=Z7ZE15ATWRSC3SNHQB09&pd_rd_wg=taxBJ&pd_rd_r=4c435e9b-bfe3-44c4-9381-2b1155ed4a67&enabledRefinements=%5B%7B%22rid%22%3A%22p_n_deal_type%22%2C%22value%22%3A%2223565492011%22%2C%22ridType%22%3A%22SEARCH_SHORT_ID%22%2C%22type%22%3A%22BROWSE_NODE%22%7D%5D&linkCode=ll2&tag=vidasustent01-20&linkId=b48e6dace008f347ce41978e71f7c4c6&language=pt_BR&ref_=as_li_ss_tl" class="offer-card games" target="_blank">
+<div class="offer-title">
+<span class="offer-emoji"> 🎴 </span>
+Mais Amados em Brinquedos
+</div>
+<div class="offer-description">
+Ofertas mais amadas em brinquedos e jogos
+</div>
+<div class="cta-button">Descobrir</div>
+</a>
+</div>
+</div>
+<div class="category">
+<h2> 👗  Moda</h2>
+<div class="offers-grid">
+<a href="https://www.amazon.com.br/promotion/psp/A1Q0DJM6OA3SQ?&linkCode=ll2&tag=vidasustent01-20&linkId=49c23ac20cc9c749483fcd66d946fcde&language=pt_BR&ref_=as_li_ss_tl" class="offer-card fashion special-offer" target="_blank">
+<div class="discount-badge">15% OFF</div>
+<div class="offer-title">
+<span class="offer-emoji"> 👟 </span>
+Tênis e Chuteiras
+</div>
+<div class="offer-description">
+Até 15% off em tênis e chuteiras
+</div>
+<div class="cta-button">Calçar</div>
+</a>
+<a href="https://www.amazon.com.br/s?i=merchant-items&me=A2ZGOFM2VWDQXR&rh=p_n_deal_type%3A23565493011&dc=&ds=v1%3AJ%2F%2BjvWOMsE%2Bv10U%2Ft9ej5dvOwfnfeMLy1pHeen2%2BHrw&marketplaceID=A2Q3Y263D00KWC&qid=1754921404&rnid=23565491011&linkCode=ll2&tag=vidasustent01-20&linkId=cf432e8ca3cb2b266a88a28fb01b7a9e&language=pt_BR&ref_=as_li_ss_tl" class="offer-card fashion special-offer" target="_blank">
+<div class="discount-badge">25% OFF</div>
+<div class="offer-title">
+<span class="offer-emoji"> 👚👖 </span>
+Desconto Hering
+</div>
+<div class="offer-description">
+Até 25% off em roupas Hering
+</div>
+<div class="cta-button">Vestir</div>
+</a>
+</div>
+</div>
+<div class="category">
+<h2> 🏠  Casa</h2>
+<div class="offers-grid">
+<a href="https://www.amazon.com.br/E10-aspirador-carpetes-autonomia-antiqueda/dp/B0FCS1ZBG4?th=1&linkCode=ll1&tag=vidasustent01-20&linkId=edf325dabe4bf503091fa02b51eae1f8&language=pt_BR&ref_=as_li_ss_tl" class="offer-card home special-offer" target="_blank">
+<div class="discount-badge">R$ 200 OFF</div>
+<div class="offer-title">
+<span class="offer-emoji"> 🧹 </span>
+Robô Aspirador
+</div>
+<div class="offer-description">
+Cupom de R$ 200 off em robô aspirador
+</div>
+<div class="cta-button">Limpar</div>
+</a>
+<a href="https://www.amazon.com.br/dp/B08FK5YNJ1?th=1&linkCode=ll1&tag=vidasustent01-20&linkId=d4d54b135a317d3e258bf00248acea9b&language=pt_BR&ref_=as_li_ss_tl" class="offer-card home" target="_blank">
+<div class="offer-title">
+<span class="offer-emoji"> 🛀 </span>
+Toalha Buddemeyer
+</div>
+<div class="offer-description">
+Oferta especial em toalhas Buddemeyer
+</div>
+<div class="cta-button">Secar</div>
+</a>
+<a href="https://www.amazon.com.br/dp/B0C6NGSD6V?th=1&linkCode=ll1&tag=vidasustent01-20&linkId=491c7c0a1c460ffff49b9fe80156125a&language=pt_BR&ref_=as_li_ss_tl" class="offer-card home" target="_blank">
+<div class="offer-title">
+<span class="offer-emoji"> 🥤 </span>
+Copo Térmico Contigo
+</div>
+<div class="offer-description">
+Desconto especial em copo térmico Contigo
+</div>
+<div class="cta-button">Beber</div>
+</a>
+</div>
+</div>
+<footer>
+<p> ✨  Ofertas v á lidas por tempo limitado  •  Links de afiliado Amazon  ✨ </p>
+<p> 🛍️  Aproveite as melhores ofertas da Amazon Brasil  🛍️ </p>
+</footer>
+<div class="hero">
+<h1> 🌟  Descubra o Mundo Amazon</h1>
+<p>Transforme sua vida digital com os melhores serviços de entretenimento, leitura e música.
+Experimente gratuitamente e descubra um novo universo de possibilidades!</p>
+<a href="#servicos" class="cta-button">Explorar Serviços Gratuitos</a>
+</div>
+<div class="urgency-banner">
+<h3> 🚀  Teste Grátis por 30 Dias - Sem Compromisso!</h3>
+<p>Cancele quando quiser. Aproveite agora esta oportunidade única!</p>
+</div>
+<div id="servicos" class="services-grid">
+<div class="service-card">
+<span class="service-icon"> 📺 </span>
+<h3>Amazon Prime Video</h3>
+<p>Acesse milhares de filmes, séries exclusivas e documentários premiados. Entretenimento de qualidade para toda a família.</p>
+<ul class="service-benefits">
+<li>Séries e filmes exclusivos Amazon Originals</li>
+<li>Catálogo internacional premium</li>
+<li>Qualidade 4K Ultra HD</li>
+<li>Assista offline em qualquer dispositivo</li>
+</ul>
+<a href="https://www.amazon.com.br/Amazon-com-Prime-Video/dp/B07VCB6CRK?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=1MNQJWJBRV645&dib=eyJ2IjoiMSJ9.KgXWiZ-kc5U6mzkTD7VtLeH05aCzzckji3fDnE2eitKvlV4smgYWkWpy3wW85ofekmsxK6h-fmLZObS3iSTbgnvatpmjiUbRWYjwr6cCno0BW6gyH63vPHmAld38H6vM2nhSRDgtRZjTVSgkjfZfCLP55eOE8Ik11Rat5eSHuqDvQUJjHLOEMUTQyTdv_Mb0sA_j3idTBTbPP7vofSmn92tkfcMvt8DYLmZBCWrJtD39ClMtWJpRDV6g89R75VeKw5_FTg-w4NQcjHvzyEhIsOid7KyFfs0w3an-NXK1gw4.H20cLg6ARLZxf5nFP65uRi-RBPfGogtIawPSfhb1eUo&dib_tag=se&keywords=prime+video&qid=1755366676&sprefix=prime+video%2Caps%2C279&sr=8-5&linkCode=ll2&tag=vidasustent01-20&linkId=cb50522027dd4354869d5d6f7a3f4911&language=pt_BR&ref_=as_li_ss_tl" class="service-link" target="_blank">Testar Grátis 30 Dias</a>
+</div>
+<div class="service-card">
+<span class="service-icon"> 🎵 </span>
+<h3>Amazon Music Unlimited</h3>
+<p>Mergulhe em um oceano de música com mais de 100 milhões de músicas em qualidade HD e espacial.</p>
+<ul class="service-benefits">
+<li>Mais de 100 milhões de músicas</li>
+<li>Qualidade de áudio HD e Ultra HD</li>
+<li>Playlists personalizadas com IA</li>
+<li>Modo offline disponível</li>
+</ul>
+<a href="https://www.amazon.com.br/music/unlimited?&linkCode=ll2&tag=vidasustent01-20&linkId=36b08403c93f129471a7c3b92bab411c&language=pt_BR&ref_=as_li_ss_tl" class="service-link" target="_blank">Experimentar Agora</a>
+</div>
+<div class="service-card">
+<span class="service-icon"> 📚 </span>
+<h3>Kindle Unlimited</h3>
+<p>Biblioteca ilimitada com mais de 1 milhão de livros, revistas e audiobooks. Leia onde e quando quiser.</p>
+<ul class="service-benefits">
+<li>Mais de 1 milhão de títulos</li>
+<li>Acesso a audiobooks inclusos</li>
+<li>Leia em qualquer dispositivo</li>
+<li>Novos lançamentos mensais</li>
+</ul>
+<a href="https://www.amazon.com.br/kindle-dbs/hz/subscribe/ku?&linkCode=ll2&tag=vidasustent01-20&linkId=8e8a4283c0291e3d1af5a66eaf88dc5a&language=pt_BR&ref_=as_li_ss_tl" class="service-link" target="_blank">Começar Leitura Grátis</a>
+</div>
+<div class="service-card">
+<span class="service-icon"> 📦 </span>
+<h3>Amazon Prime</h3>
+<p>O pacote completo! Frete grátis ilimitado, Prime Video, Prime Music e muito mais em uma única assinatura.</p>
+<ul class="service-benefits">
+<li>Frete GRÁTIS e rápido</li>
+<li>Prime Video incluído</li>
+<li>Prime Music com 2 milhões de músicas</li>
+<li>Ofertas exclusivas Prime Day</li>
+</ul>
+<a href="https://www.amazon.com.br/prime?primeCampaignId=prime_assoc_ft&linkCode=ll2&tag=vidasustent01-20&linkId=119cc9cd063441b582000cf544934fff&language=pt_BR&ref_=as_li_ss_tl" class="service-link" target="_blank">Ativar Prime Grátis</a>
+</div>
+<div class="service-card">
+<span class="service-icon"> 📺 </span>
+<h3>Prime Video Channels</h3>
+<p>Expanda seu entretenimento com canais premium adicionais. HBO, Starzplay, Noggin e muito mais!</p>
+<ul class="service-benefits">
+<li>Canais premium exclusivos</li>
+<li>Controle total das suas assinaturas</li>
+<li>Teste gratuito de 7 dias</li>
+<li>Cancele quando quiser</li>
+</ul>
+<a href="https://www.amazon.com.br/s?k=prime+video+channels&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&linkCode=ll2&tag=vidasustent01-20&linkId=8b5feca1a9976ced63b5b1b0e53e434b&language=pt_BR&ref_=as_li_ss_tl" class="service-link" target="_blank">Explorar Canais</a>
+</div>
+<div class="service-card">
+<span class="service-icon"> 👶 </span>
+<h3>Lista do Bebê Amazon</h3>
+<p>Prepare-se para a chegada do seu bebê com descontos especiais e lista de desejos personalizada.</p>
+<ul class="service-benefits">
+<li>Descontos exclusivos em produtos para bebês</li>
+<li>Lista compartilhável com família</li>
+<li>Recomendações personalizadas</li>
+<li>Frete grátis em compras elegíveis</li>
+</ul>
+<a href="https://www.amazon.com.br/baby-reg?&linkCode=ll2&tag=vidasustent01-20&linkId=3835b8708e1a846746879e78675e5bfb&language=pt_BR&ref_=as_li_ss_tl" class="service-link" target="_blank">Criar Lista Gratuita</a>
+</div>
+</div>
+<div class="testimonials">
+<div class="testimonial">
+<blockquote>"Desde que descobri esses serviços Amazon, minha vida digital mudou completamente. Entretenimento de qualidade, livros incríveis e música para todos os momentos!"</blockquote>
+<cite>- Maria Silva, usuária há 2 anos</cite>
+</div>
+</div>
+<div class="urgency-banner">
+<h3> ⏰   Ú ltima Chance - Comece Hoje Mesmo!</h3>
+<p>Milhões de pessoas já descobriram. Não perca tempo, teste agora gratuitamente!</p>
+<a href="#servicos" class="cta-button" style="margin-top: 15px;">Escolher Meu Serviço Favorito</a>
+</div>
+<div class="footer">
+<p> 🌱  Vida Sustentável - Compartilhando as melhores oportunidades digitais</p>
+<div class="social-links">
+<a href="#" title="Facebook"> 📘 </a>
+<a href="#" title="Instagram"> 📷 </a>
+<a href="#" title="YouTube"> 📺 </a>
+<a href="#" title="Twitter"> 🐦 </a>
+</div>
+<p><small>* Termos e condições se aplicam. Os testes gratuitos podem ser cancelados a qualquer momento.</small></p>
+</div>
+</div>
+<script>
+// Adicionar efeito de scroll suave
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+// Adicionar animação de entrada
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -50px 0px'
+};
+const observer = new IntersectionObserver(function(entries) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, observerOptions);
+document.querySelectorAll('.category').forEach(category => {
+  category.style.opacity = '0';
+  category.style.transform = 'translateY(50px)';
+  category.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  observer.observe(category);
+});
+// Smooth scrolling para links internos
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth'
+    });
+  });
+});
+// Animação de entrada dos cards
+const serviceObserverOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -100px 0px'
+};
+const serviceObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
+    }
+  });
+}, serviceObserverOptions);
+document.querySelectorAll('.service-card').forEach(card => {
+  card.style.opacity = '0';
+  card.style.transform = 'translateY(30px)';
+  card.style.transition = 'all 0.6s ease';
+  serviceObserver.observe(card);
+});
+// Contador de cliques nos CTAs
+document.querySelectorAll('.offer-card, .service-link, .cta-button').forEach(button => {
+  button.addEventListener('click', function() {
+    console.log('CTA clicado:', this.href || this.getAttribute('href'));
+  });
+});
+</script>
 </body>
 </html>
