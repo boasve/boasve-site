@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ofertas Especiais Amazon - Produtos Recomendados</title>
+    <title>Amazon: Produtos e Serviços</title>
     <style>
         * {
             margin: 0;
@@ -15,6 +15,7 @@
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             line-height: 1.6;
+            color: #333;
         }
         .container {
             max-width: 1200px;
@@ -34,7 +35,7 @@
             color: #333;
             font-size: 2.5em;
             margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
         .header p {
             color: #666;
@@ -187,171 +188,350 @@
             animation: pulse 2s infinite;
         }
         @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7); }
-            70% { box-shadow: 0 0 0 10px rgba(255, 107, 107, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(255, 107, 107, 0); }
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 107, 107, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 10px rgba(255, 107, 107, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 107, 107, 0);
+            }
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+        }
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        .service-card p {
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .service-benefits {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+        .service-benefits li {
+            padding: 5px 0;
+            color: #555;
+            position: relative;
+            padding-left: 20px;
+        }
+        .service-benefits li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #27ae60;
+            font-weight: bold;
+        }
+        .service-link {
+            display: inline-block;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        .service-link:hover {
+            background: linear-gradient(45deg, #2980b9, #3498db);
+            transform: scale(1.05);
+        }
+        .urgency-banner {
+            background: linear-gradient(45deg, #e74c3c, #c0392b);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 40px 0;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.8;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+        .testimonials {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 40px;
+            margin: 40px 0;
+            text-align: center;
+        }
+        .testimonial {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 15px;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        .testimonial .author {
+            font-weight: bold;
+            color: rgba(255, 255, 255, 0.7);
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <h1> 🛒 Ofertas Especiais Amazon</h1>
-            <p>Produtos recomendados com os melhores preços e qualidade</p>
+            <h1>Amazon: Produtos e Serviços 🛒</h1>
+            <p>Descubra os melhores produtos e serviços da Amazon em um só lugar.</p>
         </header>
+
         <section class="category">
-            <h2><span class="category-icon"> 🏠 </span>Semana do Home Office</h2>
+            <h2><span class="category-icon">🏠</span>Semana do Home Office</h2>
             <div class="products-grid">
                 <div class="product-card">
-                    <div class="product-title"><span class="product-emoji"> 🎧 </span>Tudo para Home Office</div>
+                    <div class="product-title"><span class="product-emoji">🎧</span>Tudo para Home Office</div>
                     <a href="https://www.amazon.com.br/b?ie=UTF8&node=211000230011&linkCode=ll2&tag=vidasustent01-20&linkId=93649af11dae93d89df65582e9522bd8&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Ver Ofertas</a>
                 </div>
                 <div class="product-card">
-                    <div class="product-title"><span class="product-emoji"> 🖨️ </span>Multifuncional Brother Laser</div>
+                    <div class="product-title"><span class="product-emoji">🖨️</span>Multifuncional Brother Laser</div>
                     <a href="https://www.amazon.com.br/dp/B07VNJ7TSF?&linkCode=ll1&tag=vidasustent01-20&linkId=ee8bb910a477b843bfe951f70749b039&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Comprar Agora</a>
                 </div>
                 <div class="product-card">
-                    <div class="product-title"><span class="product-emoji"> 🎧 </span>Fone Bluetooth 5.0 Philco</div>
+                    <div class="product-title"><span class="product-emoji">🎧</span>Fone Bluetooth 5.0 Philco</div>
                     <a href="https://www.amazon.com.br/dp/B082WZ2C1C?th=1&linkCode=ll1&tag=vidasustent01-20&linkId=a5f04323681f62a299ca52cd73deb316&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Comprar Agora</a>
                 </div>
                 <div class="product-card">
-                    <div class="product-title"><span class="product-emoji"> 🔋 </span>Nobreak Interactive Intelbras</div>
+                    <div class="product-title"><span class="product-emoji">🔋</span>Nobreak Interactive Intelbras</div>
                     <a href="https://www.amazon.com.br/dp/B07D7Y9NMG?th=1&linkCode=ll1&tag=vidasustent01-20&linkId=fc2e94cef0a05b4605ef88440b4b1f8a&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Comprar Agora</a>
                 </div>
             </div>
         </section>
+
         <section class="category">
-            <h2><span class="category-icon"> 🪑 </span>Móveis para Home Office</h2>
+            <h2><span class="category-icon">🪑</span>Móveis para Home Office</h2>
             <div class="products-grid">
                 <div class="product-card">
-                    <div class="product-title"><span class="product-emoji"> 🗄️ </span>Mesas e Escrivaninhas</div>
+                    <div class="product-title"><span class="product-emoji">🗄️</span>Mesas e Escrivaninhas</div>
                     <a href="https://www.amazon.com.br/dp/B084TKF88Q?&linkCode=ll1&tag=vidasustent01-20&linkId=ecc53f75195e13a270ada27c27624e94&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Ver Ofertas</a>
                 </div>
                 <div class="product-card">
-                    <div class="product-title"><span class="product-emoji"> 🪑 </span>Cadeiras de Escritório</div>
+                    <div class="product-title"><span class="product-emoji">🪑</span>Cadeiras de Escritório</div>
                     <a href="https://www.amazon.com.br/s?k=Cadeiras+de+Escrit%EF%BF%BDrio+para+Casa&i=furniture&rh=n%3A50295236011%2Cp_n_deal_type%3A23565493011%2Cp_72%3A17833786011&dc=&ds=v1%3AGFJ6sMWHCwddorUx85jyFmqc5dezN2gnuXaIu057E4c&__mk_pt_BR=%EF%BF%BDM%EF%BF%BD%7D%EF%BF%BD%EF%BF%BD&pf_rd_p=f2a1d647-77a3-4385-9923-c9156c6994f3&pf_rd_r=VY4GV85BBYYZ0R1T72E4&qid=1755087614&rnid=5560472011&linkCode=ll2&tag=vidasustent01-20&linkId=d90fd4117c94a83a804344ab187e123e&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Ver Ofertas</a>
                 </div>
                 <div class="product-card">
-                    <div class="product-title"><span class="product-emoji"> 🗄️ </span>Armários, Estantes e Gaveteiros</div>
+                    <div class="product-title"><span class="product-emoji">🗄️</span>Armários, Estantes e Gaveteiros</div>
                     <a href="https://www.amazon.com.br/b?ie=UTF8&node=211000230011&discounts-widget=%2522%257B%255C%2522state%255C%2522%253A%257B%255C%2522refinementFilters%255C%2522%253A%257B%255C%2522departments%255C%2522%253A%255B%255C%252216191001011%252F17100530011%252F17100552011%252F17100665011%255C%2522%255D%257D%257D%252C%255C%2522version%255C%2522%253A1%257D%2522&bubble-id=moveis&linkCode=ll2&tag=vidasustent01-20&linkId=52504109a54a642aa546027c0dc6734b&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Ver Ofertas</a>
                 </div>
                 <div class="product-card pulse-animation">
-                    <div class="product-title"><span class="product-emoji"> 💡 </span>Abajur Mesa Recarregável - 15% OFF</div>
+                    <div class="product-title"><span class="product-emoji">💡</span>Abajur Mesa Recarregável - 15% OFF</div>
                     <a href="https://www.amazon.com.br/Recarreg%C3%A1vel-Lumin%C3%A1ria-Dimeriz%C3%A1vel-Antiderrapante-Escrit%C3%B3rio/dp/B0F3WJWYJ9?pf_rd_r=EW04P2M1HPNEJG7SZN34&pf_rd_p=73fa0509-1210-44b9-9acd-45b38010188d&linkCode=ll1&tag=vidasustent01-20&linkId=fdb40f926a16a284524a1809f64c7b91&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Cupom 15% OFF</a>
                 </div>
             </div>
         </section>
+
         <section class="category">
-            <h2><span class="category-icon"> 🍽️ </span>Alimentos e Bebidas</h2>
+            <h2><span class="category-icon">🍽️</span>Alimentos e Bebidas</h2>
             <div class="products-grid">
                 <div class="product-card">
-                    <div class="product-title"><span class="product-emoji"> 🏋🏻‍♀️ </span>Seleção YoPRO</div>
+                    <div class="product-title"><span class="product-emoji">🏋🏻♀️</span>Seleção YoPRO</div>
                     <a href="https://www.amazon.com.br/s?i=grocery&hidden-keywords=B09M2B14V7%7CB0CXBCYDVH%7CB0D4RHRR3V%7CB0D6SP9R3G%7CB0C4VZ3C4F%7CB0C3WDTWZK%7CB0DJ3J1QVN%7CB0DDVG4BBS%7CB0CX9WV39T%7CB0CXF9FZ94%7CB0DDV8NGTG%7CB0D6T4H2WT%7CB0CXB4HYV8%7CB0CXBCWPPL%7CB09GJFFK5H%7CB0D239PCKH&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=2BFKXZ953Z9DH&sprefix=%2Cgrocery%2C246&linkCode=ll2&tag=vidasustent01-20&linkId=567587919f58964b473b55d1c0f1c786&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Ver Ofertas</a>
                 </div>
                 <div class="product-card">
-                    <div class="product-title"><span class="product-emoji"> ☕ </span>Cápsulas Nescafé</div>
+                    <div class="product-title"><span class="product-emoji">☕</span>Cápsulas Nescafé</div>
                     <a href="https://www.amazon.com.br/s?i=wine&rh=n%3A18991079011%2Cp_4%3ANESCAFE%25CC%2581%2BDOLCE%2BGUSTO%2Cp_n_deal_type%3A23565492011&dc=&ds=v1%3A3WIXj0uubPjW%2Bcjwmsc4daJc2QamxFPr8EDDUkaTdlE&qid=1755606395&rnid=23565491011&linkCode=ll2&tag=vidasustent01-20&linkId=2f356b9068881f2188d7bff61c239574&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Ver Promoções</a>
                 </div>
                 <div class="product-card">
-                    <div class="product-title"><span class="product-emoji"> 🍪 </span>Biscoito Oreo Selena Gomez - Caixa 48un</div>
+                    <div class="product-title"><span class="product-emoji">🍪</span>Biscoito Oreo Selena Gomez - Caixa 48un</div>
                     <a href="https://www.amazon.com.br/Biscoito-Oreo-Selena-Gomez-Pacote/dp/B0FBPJPRQ2?&linkCode=ll1&tag=vidasustent01-20&linkId=f4a4da43a49bcfcab66b917d1ac4ab5e&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Comprar Agora</a>
                 </div>
             </div>
         </section>
+
         <section class="kindle-section">
-            <h3> 📚 Para o Público Leitor</h3>
+            <h3>📚 Para o Público Leitor</h3>
             <p>Você sabia que promovendo o Kindle Unlimited você ganha R$15 a cada nova assinatura?</p>
             <a href="https://www.amazon.com.br/kindle-dbs/hz/subscribe/ku?&linkCode=ll2&tag=vidasustent01-20&linkId=403a3de40b8384e63a5d9b66d972ffd0&language=pt_BR&ref_=as_li_ss_tl" class="kindle-link" target="_blank">Kindle Unlimited</a>
         </section>
+
         <section class="category">
-            <h2><span class="category-icon"> 📚 </span>Livros Recomendados</h2>
+            <h2><span class="category-icon">📚</span>Livros Recomendados</h2>
             <div class="products-grid">
                 <div class="product-card">
-                    <div class="product-title"><span class="product-emoji"> 📙 </span>Talvez você deva conversar com alguém</div>
-                    <a href="https://www.amazon.com.br/Talvez-voc%C3%AAs-deva-conversar-algu%C3%A9m/dp/6599039812?&linkCode=ll1&tag=vidasustent01-20&linkId=21925859f21b2a8d9c08140434f681f1&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Comprar Livro</a>
+                    <div class="product-title"><span class="product-emoji">📙</span>Talvez você deva conversar com alguém</div>
+                    <a href="https://www.amazon.com.br/Talvez-voc%C3%AA-deva-conversar-algu%C3%A9m/dp/6599039812?&linkCode=ll1&tag=vidasustent01-20&linkId=21925859f21b2a8d9c08140434f681f1&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Comprar Livro</a>
                 </div>
                 <div class="product-card">
-                    <div class="product-title"><span class="product-emoji"> 📙 </span>O menino do pijama listrado</div>
+                    <div class="product-title"><span class="product-emoji">📙</span>O menino do pijama listrado</div>
                     <a href="https://www.amazon.com.br/menino-do-pijama-listrado/dp/853591112X?&linkCode=ll1&tag=vidasustent01-20&linkId=a2e985ab64b66d0e718d429f7c4b5a86&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Comprar Livro</a>
                 </div>
             </div>
         </section>
+
         <section class="category">
-            <h2><span class="category-icon"> 👗 </span>Moda e Acessórios</h2>
+            <h2><span class="category-icon">👗</span>Moda e Acessórios</h2>
             <div class="products-grid">
                 <div class="product-card">
-                    <div class="product-title"><span class="product-emoji"> 👖 </span>Legging Academia Poliamida</div>
+                    <div class="product-title"><span class="product-emoji">👖</span>Legging Academia Poliamida</div>
                     <a href="https://www.amazon.com.br/Legging-Academia-Poliamida-Cintura-Caramelo/dp/B0F4RD2L39?th=1&psc=1&linkCode=ll1&tag=vidasustent01-20&linkId=9fa698c364bb415b0b3c13541849b466&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Comprar Agora</a>
                 </div>
                 <div class="product-card">
-                    <div class="product-title"><span class="product-emoji"> 🧳 </span>Samsonite Magnum Eco Spinner 55cm</div>
+                    <div class="product-title"><span class="product-emoji">🧳</span>Samsonite Magnum Eco Spinner 55cm</div>
                     <a href="https://www.amazon.com.br/Samsonite-Spinner-bagagem-pequena-alum%C3%ADnio/dp/B0967XFLV2?&linkCode=ll1&tag=vidasustent01-20&linkId=cf46aa6e048f0d683dfced9e124e8982&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Ver Mala</a>
                 </div>
                 <div class="product-card">
-                    <div class="product-title"><span class="product-emoji"> 🥿 </span>Calçados a partir de 10% OFF</div>
+                    <div class="product-title"><span class="product-emoji">🥿</span>Calçados a partir de 10% OFF</div>
                     <a href="https://www.amazon.com.br/s?i=merchant-items&me=AJTRHQYPRMPJ3&rh=p_n_deal_type%3A23565493011&dc=&ds=v1%3AOj45FaNMTZoC7BHaLr8bC2lzaD%2FoWRrx6ZUOCFRId8M&marketplaceID=A2Q3Y263D00KWC&qid=1755018150&rnid=23565491011&linkCode=ll2&tag=vidasustent01-20&linkId=56f8771c9707da191bd49f5b3a138fa6&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Ver Calçados</a>
                 </div>
             </div>
         </section>
+
         <section class="category">
-            <h2><span class="category-icon"> 💪 </span>Fitness e Saúde</h2>
+            <h2><span class="category-icon">💪</span>Fitness e Saúde</h2>
             <div class="products-grid">
                 <div class="product-card">
-                    <div class="product-title"><span class="product-emoji"> 🍶 </span>Garrafa Owala FreeSip Inox</div>
+                    <div class="product-title"><span class="product-emoji">🍶</span>Garrafa Owala FreeSip Inox</div>
                     <a href="https://www.amazon.com.br/Garrafa-inoxid%C3%A1vel-isolada-Owala-Marshmallow/dp/B085DVNHHK?th=1&linkCode=ll1&tag=vidasustent01-20&linkId=4c862d5ba29b3560548eabaf67b5957f&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Oferta Prime</a>
                 </div>
                 <div class="product-card">
-                    <div class="product-title"><span class="product-emoji"> 💪 </span>Kit 5 Mini Bands Elástico</div>
+                    <div class="product-title"><span class="product-emoji">💪</span>Kit 5 Mini Bands Elástico</div>
                     <a href="https://www.amazon.com.br/El%C3%A1stico-Exerc%C3%ADcio-Treino-Academia-Intensidade/dp/B0BG8Y6811?th=1&linkCode=ll1&tag=vidasustent01-20&linkId=aaaef7fcd6c140138f2003b585f48bcb&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Comprar Kit</a>
                 </div>
                 <div class="product-card">
-                    <div class="product-title"><span class="product-emoji"> 🧘‍♀️ </span>Tapete Yoga Dupla Camada EVA 6mm</div>
+                    <div class="product-title"><span class="product-emoji">🧘‍♀️</span>Tapete Yoga Dupla Camada EVA 6mm</div>
                     <a href="https://www.amazon.com.br/Tapete-Antiderrapante-Pilates-Fitness-Gin%C3%A1stica/dp/B0F6NXQ94L?th=1&linkCode=ll1&tag=vidasustent01-20&linkId=a414d28b6430366897132c2b3045a52b&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Ver Tapete</a>
                 </div>
             </div>
         </section>
+
         <section class="category special-offer">
-            <h2><span class="category-icon"> ⭐ </span>Ofertas Especiais</h2>
+            <h2><span class="category-icon">⭐</span>Ofertas Especiais</h2>
             <div class="products-grid">
                 <div class="product-card">
-                    <div class="product-title"><span class="product-emoji"> 🏡 </span>LUMAI - Economize 20%</div>
+                    <div class="product-title"><span class="product-emoji">🏡</span>LUMAI - Economize 20%</div>
                     <a href="https://www.amazon.com.br/promotion/psp/A488RPBBNK7MT?&linkCode=ll2&tag=vidasustent01-20&linkId=10db146ebde7252f84a7274101012655&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Ver Promoção</a>
                 </div>
                 <div class="product-card">
-                    <div class="product-title"><span class="product-emoji"> 🧵 </span>Máquinas Singer - R$100 OFF</div>
+                    <div class="product-title"><span class="product-emoji">🧵</span>Máquinas Singer - R$100 OFF</div>
                     <a href="https://www.amazon.com.br/promotion/psp/A2H219LBF4HSLX?&linkCode=ll2&tag=vidasustent01-20&linkId=132ab05e2bcdb70321629a0d66de47fd&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Aproveitar Desconto</a>
                 </div>
                 <div class="product-card">
-                    <div class="product-title"><span class="product-emoji"> 🏡 </span>Mixer Oster 3 em 1 + 10% Cupom</div>
+                    <div class="product-title"><span class="product-emoji">🏡</span>Mixer Oster 3 em 1 + 10% Cupom</div>
                     <a href="https://www.amazon.com.br/Oster-Mixer-Power-Black-Inox/dp/B0DRPNMS7K?pf_rd_r=EW04P2M1HPNEJG7SZN34&pf_rd_p=73fa0509-1210-44b9-9acd-45b38010188d&linkCode=ll1&tag=vidasustent01-20&linkId=61ee557341bfa68f68264eaf8d0add72&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Oferta + Cupom</a>
                 </div>
                 <div class="product-card">
-                    <div class="product-title"><span class="product-emoji"> 🏡 </span>Produtos Oster - 10% OFF</div>
+                    <div class="product-title"><span class="product-emoji">🏡</span>Produtos Oster - 10% OFF</div>
                     <a href="https://www.amazon.com.br/promotion/psp/A1DFPSFKYTFVC6?&linkCode=ll2&tag=vidasustent01-20&linkId=8654739a7338c3d05567fd61212fe19f&language=pt_BR&ref_=as_li_ss_tl" class="product-link" target="_blank">Ver Todos</a>
                 </div>
             </div>
         </section>
+
+        <section class="category">
+            <h2><span class="category-icon">✨</span>Serviços Amazon</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="service-icon">Prime Video</span>
+                    <h3>Prime Video</h3>
+                    <p>Milhares de filmes e séries, incluindo produções originais Amazon.</p>
+                    <ul class="service-benefits">
+                        <li>✓ Conteúdo exclusivo</li>
+                        <li>✓ Acesso em qualquer lugar</li>
+                        <li>✓ Downloads para assistir offline</li>
+                    </ul>
+                    <a href="https://www.amazon.com.br/gp/video/storefront/?&linkCode=ll2&tag=vidasustent01-20&linkId=475c7553f1737e8c3383a8f15886d30f&language=pt_BR&ref_=as_li_ss_tl" class="service-link" target="_blank">Saiba Mais</a>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">Amazon Music</span>
+                    <h3>Amazon Music</h3>
+                    <p>Milhões de músicas sem anúncios, playlists personalizadas e podcasts.</p>
+                    <ul class="service-benefits">
+                        <li>✓ Catálogo com 100 milhões de músicas</li>
+                        <li>✓ Músicas sem anúncios</li>
+                        <li>✓ Reprodução offline</li>
+                    </ul>
+                    <a href="https://www.amazon.com.br/music/unlimited?&linkCode=ll2&tag=vidasustent01-20&linkId=6944e3d36b2229a43a6d96a603c623be&language=pt_BR&ref_=as_li_ss_tl" class="service-link" target="_blank">Saiba Mais</a>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">Amazon Prime</span>
+                    <h3>Amazon Prime</h3>
+                    <p>Frete GRÁTIS em produtos elegíveis, acesso ao Prime Video, Music e mais!</p>
+                    <ul class="service-benefits">
+                        <li>✓ Frete grátis e rápido</li>
+                        <li>✓ Prime Video incluso</li>
+                        <li>✓ Ofertas exclusivas</li>
+                    </ul>
+                    <a href="https://www.amazon.com.br/amazonprime?&linkCode=ll2&tag=vidasustent01-20&linkId=b47a166df04473b64c12ef16b50e4b85&language=pt_BR&ref_=as_li_ss_tl" class="service-link" target="_blank">Assinar Agora</a>
+                </div>
+                <div class="service-card">
+                    <span class="service-icon">Amazon Kids+</span>
+                    <h3>Amazon Kids+</h3>
+                    <p>Conteúdo seguro e educativo para crianças. Diversão sem limites para os pequenos.</p>
+                    <ul class="service-benefits">
+                        <li>✓ Milhares de livros, vídeos e apps</li>
+                        <li>✓ Ambiente seguro</li>
+                        <li>✓ Controle parental fácil de usar</li>
+                    </ul>
+                    <a href="https://www.amazon.com.br/gp/product/B085F85GJJ?&linkCode=ll2&tag=vidasustent01-20&linkId=77f6b801a2f605a964a2f96e4c73f4e3&language=pt_BR&ref_=as_li_ss_tl" class="service-link" target="_blank">Conhecer</a>
+                </div>
+            </div>
+        </section>
+
         <footer class="footer">
-            <p> 💡 Todos os links são de afiliado Amazon - Comprando através deles você nos ajuda sem pagar nada a mais!</p>
-            <p> 🛒 Preços e disponibilidade podem variar conforme a Amazon</p>
+            <p>💡 Todos os links são de afiliado Amazon - Comprando através deles você nos ajuda sem pagar nada a mais!</p>
+            <p>🛒 Preços e disponibilidade podem variar conforme a Amazon</p>
         </footer>
     </div>
-    <script>
-        // Adiciona efeitos de hover e animações
-        document.addEventListener('DOMContentLoaded', function() {
-            const productCards = document.querySelectorAll('.product-card');
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Adiciona efeitos de hover e animações para cards de produtos
+            const productCards = document.querySelectorAll('.product-card');
             productCards.forEach(card => {
                 card.addEventListener('mouseenter', function() {
                     this.style.transform = 'translateY(-8px) scale(1.02)';
                 });
-
                 card.addEventListener('mouseleave', function() {
                     this.style.transform = 'translateY(0) scale(1)';
                 });
             });
-            // Animação de entrada para as categorias
-            const categories = document.querySelectorAll('.category');
+
+            // Animação de entrada para as categorias de produtos
+            const productCategories = document.querySelectorAll('.category');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -363,11 +543,48 @@
                 threshold: 0.1,
                 rootMargin: '0px 0px -50px 0px'
             });
-            categories.forEach(category => {
+            productCategories.forEach(category => {
                 category.style.opacity = '0';
                 category.style.transform = 'translateY(30px)';
                 category.style.transition = 'all 0.6s ease';
                 observer.observe(category);
+            });
+
+            // Adiciona scroll suave para links internos
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Animação de entrada dos cards de serviço
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
+            const serviceObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, observerOptions);
+            document.querySelectorAll('.service-card').forEach(card => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(30px)';
+                card.style.transition = 'all 0.6s ease';
+                serviceObserver.observe(card);
+            });
+
+            // Contador de cliques nos CTAs
+            document.querySelectorAll('.service-link, .cta-button').forEach(button => {
+                button.addEventListener('click', function() {
+                    console.log('CTA clicado:', this.href || this.getAttribute('href'));
+                });
             });
         });
     </script>
