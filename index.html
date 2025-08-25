@@ -196,11 +196,9 @@
             border-radius: 25px;
             font-weight: bold;
             transition: all 0.3s ease;
-            margin-top: 10px;
+            margin-top: 15px;
             box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
+            text-align: center;
         }
 
         .offer-btn:hover, .service-link:hover {
@@ -221,47 +219,7 @@
             border-radius: 10px;
             margin: 10px 0;
             font-size: 0.9em;
-        }
-
-        .urgency-banner {
-            background: linear-gradient(45deg, #e74c3c, #c0392b);
-            color: white;
-            text-align: center;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 40px 0;
-            animation: pulseUrgency 2s infinite;
-        }
-
-        @keyframes pulseUrgency {
-            0% { opacity: 1; }
-            50% { opacity: 0.8; }
-            100% { opacity: 1; }
-        }
-
-        .services-hero {
-            text-align: center;
-            padding: 40px 20px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            margin: 40px 0;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .services-hero h2 {
-            font-size: 2.5rem;
-            color: white;
-            margin-bottom: 15px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-            border: none;
-        }
-
-        .services-hero p {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.9);
-            max-width: 600px;
-            margin: 0 auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
 
         footer {
@@ -271,6 +229,19 @@
             background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
             color: #7f8c8d;
+        }
+
+        .social-icons {
+            margin-top: 15px;
+        }
+        .social-icons a {
+            color: #7f8c8d;
+            font-size: 1.5em;
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        .social-icons a:hover {
+            color: #3498db;
         }
 
         @media (max-width: 768px) {
@@ -286,12 +257,8 @@
                 padding: 20px;
             }
 
-            .offer-item, .service-card {
+            .offer-item {
                 padding: 15px;
-            }
-
-            .offers-grid {
-                grid-template-columns: 1fr;
             }
         }
     </style>
@@ -299,246 +266,220 @@
 <body>
 <div class="container">
 <div class="date-header">
-            📅 22/08/2025 (Sexta-feira) - Ofertas Especiais Amazon Brasil
+            🗓️ Ofertas atualizadas em 22 de Agosto de 2025
         </div>
 <header>
-<h1>🛒 Ofertas Exclusivas Amazon</h1>
-<p class="subtitle">Associado(a) e Influencer, confira as melhores ofertas em produtos e serviços na Amazon hoje!</p>
+<h1> 🛒 Ofertas Exclusivas Amazon</h1>
+<p class="subtitle">Associado(a) e Influencer, confira ofertas e produtos recomendados na Amazon hoje!</p>
 <div class="highlight-box">
-<strong>🎉 Ofertas Especiais de Sexta-feira - Aproveite enquanto durarem!</strong>
+<strong> 🎉 Vem aí a Semana dos Creators de 25 a 31 de agosto. Fique por dentro das novidades!</strong>
 </div>
 </header>
-<!-- SEÇÃO DE OFERTAS EM PRODUTOS -->
-<div class="category">
-<h2><span class="emoji">💻</span>Ofertas em Eletrônicos</h2>
-<div class="offers-grid">
-<div class="offer-item">
-<div class="offer-title">🔥 Ofertas do Dia em Eletrônicos</div>
-<div class="tip-box">👉 Incentive seu público a baixar o app e divulgue ofertas só no app!</div>
-<a class="offer-btn" href="#" target="_blank">Ver Ofertas</a>
-</div>
-<div class="offer-item">
-<div class="offer-title">🍎 Segurança Avançada com Apple - Dispositivo protegido contra roubo</div>
-<a class="offer-btn" href="#" target="_blank">Conferir Segurança Apple</a>
-</div>
-<div class="offer-item">
-<div class="offer-title">💻 PC e Informática na Semana do Home Office</div>
-<a class="offer-btn" href="#" target="_blank">Ver PC e Informática</a>
-</div>
-<div class="offer-item">
-<div class="offer-title">🏠 Semana do Home Office - Tudo para trabalhar em casa</div>
-<a class="offer-btn" href="#" target="_blank">Explorar Home Office</a>
-</div>
-</div>
-</div>
-<div class="category">
-<h2><span class="emoji">📚</span>Recomendações em Livros</h2>
-<div class="offers-grid">
-<div class="offer-item">
-<div class="offer-title">📖 eBooks Gratuitos e em Oferta por apenas 24h</div>
-<div class="tip-box">👉 Encha seu Kindle com ofertas imperdíveis!</div>
-<a class="offer-btn" href="#" target="_blank">Ver eBooks em Oferta</a>
-</div>
-<div class="offer-item">
-<div class="offer-title">🎯 Kindle Unlimited - Ganhe comissão por nova assinatura!</div>
-<div class="tip-box">💡 Você sabia que pode ganhar comissão a cada nova assinatura gerada pelo seu link?</div>
-<a class="offer-btn" href="#" target="_blank">Promover Kindle Unlimited</a>
-</div>
-<div class="offer-item">
-<div class="offer-title">📙 Me encontre no lago</div>
-<a class="offer-btn" href="#" target="_blank">Ver Livro</a>
-</div>
-<div class="offer-item">
-<div class="offer-title">📙 Antes que o Café esfrie 4</div>
-<a class="offer-btn" href="#" target="_blank">Ver Livro</a>
-</div>
-</div>
-</div>
-<div class="category">
-<h2><span class="emoji">💄</span>Ofertas em Beleza</h2>
-<div class="offers-grid">
-<div class="offer-item">
-<div class="offer-title">✨ L'Oréal Paris - Compre R$69,90 e leve 15% OFF</div>
-<a class="offer-btn" href="#" target="_blank">Aproveitar Oferta L'Oréal</a>
-</div>
-<div class="offer-item">
-<div class="offer-title">🌟 Skin Week - Até 30% OFF em hidratantes (Exclusivo Prime)</div>
-<a class="offer-btn" href="#" target="_blank">Ver Skin Week</a>
-</div>
-<div class="offer-item">
-<div class="offer-title">🧴 Compre R$49.90 em Garnier e leve 15% off</div>
-<a class="offer-btn" href="#" target="_blank">Ver Garnier</a>
-</div>
-<div class="offer-item">
-<div class="offer-title">🧴 Compre R$59.90 em Elsève e leve 15% off</div>
-<a class="offer-btn" href="#" target="_blank">Ver Elsève</a>
-</div>
-</div>
-</div>
-<div class="category">
-<h2><span class="emoji">🏠</span>Casa e Cozinha</h2>
-<div class="offers-grid">
-<div class="offer-item">
-<div class="offer-title">🥤 Blender Ultra Power + Cupom 10% OFF (Exclusivo Prime)</div>
-<a class="offer-btn" href="#" target="_blank">Ver Blender</a>
-</div>
-<div class="offer-item">
-<div class="offer-title">🔪 20% OFF em itens para sua cozinha</div>
-<a class="offer-btn" href="#" target="_blank">Ver Itens de Cozinha</a>
-</div>
-<div class="offer-item">
-<div class="offer-title">🛀 Economize 5% em Toalhas Profissionais</div>
-<a class="offer-btn" href="#" target="_blank">Ver Toalhas</a>
-</div>
-<div class="offer-item">
-<div class="offer-title">🌸 Seleção de Downy - Produtos para lavanderia</div>
-<a class="offer-btn" href="#" target="_blank">Ver Produtos Downy</a>
-</div>
-</div>
-</div>
-<div class="category">
-<h2><span class="emoji">👗</span>Moda</h2>
-<div class="offers-grid">
-<div class="offer-item">
-<div class="offer-title">👙 20% OFF em Moda Íntima</div>
-<a class="offer-btn" href="#" target="_blank">Ver Moda Íntima</a>
-</div>
-<div class="offer-item">
-<div class="offer-title">👕 30% OFF em todo catálogo Reserva</div>
-<a class="offer-btn" href="#" target="_blank">Ver Catálogo Reserva</a>
-</div>
-<div class="offer-item">
-<div class="offer-title">👜 Bolsa Feminina Baú Transversal</div>
-<a class="offer-btn" href="#" target="_blank">Ver Bolsa</a>
-</div>
-</div>
-</div>
-<div class="category">
-<h2><span class="emoji">🏃‍♂️</span>Esportes</h2>
-<div class="offers-grid">
-<div class="offer-item">
-<div class="offer-title">🚲 Tudo para Ciclismo</div>
-<a class="offer-btn" href="#" target="_blank">Ver Ciclismo</a>
-</div>
-<div class="offer-item">
-<div class="offer-title">🏃‍♀️ Seleção para Corrida</div>
-<a class="offer-btn" href="#" target="_blank">Ver Itens de Corrida</a>
-</div>
-<div class="offer-item">
-<div class="offer-title">🏊🏻‍♀️ Itens para Esportes Aquáticos</div>
-<a class="offer-btn" href="#" target="_blank">Ver Esportes Aquáticos</a>
-</div>
-</div>
-</div>
-<!-- DIVISOR ENTRE PRODUTOS E SERVIÇOS -->
 <div class="section-divider">
-            🌟 DESCUBRA TAMBÉM OS MELHORES SERVIÇOS AMAZON 🌟
-        </div>
-<!-- SEÇÃO DE SERVIÇOS AMAZON -->
-<div class="services-hero">
-<h2>🌟 Serviços Premium Amazon</h2>
-<p>Transforme sua vida digital com os melhores serviços de entretenimento, leitura e música. Experimente gratuitamente!</p>
-</div>
-<div class="urgency-banner">
-<h3>🚀 Teste Grátis por 30 Dias - Sem Compromisso!</h3>
-<p>Cancele quando quiser. Aproveite agora esta oportunidade única!</p>
-</div>
+        PRODUTOS
+    </div>
 <div class="category">
-<h2><span class="emoji">📺</span>Streaming e Entretenimento</h2>
+<h2><span class="emoji"> 💻 </span>Ofertas em Eletrônicos</h2>
 <div class="offers-grid">
-<div class="service-card">
-<div class="service-title">📺 Amazon Prime Video</div>
-<div class="service-description">Acesse milhares de filmes, séries exclusivas e documentários premiados. Entretenimento de qualidade para toda a família.</div>
-<ul class="service-benefits">
-<li>Séries e filmes exclusivos Amazon Originals</li>
-<li>Catálogo internacional premium</li>
-<li>Qualidade 4K Ultra HD</li>
-<li>Assista offline em qualquer dispositivo</li>
-</ul>
-<a class="service-link" href="#" target="_blank">Testar Grátis 30 Dias</a>
+<div class="offer-item">
+<div class="offer-title"> 🔥 Ofertas do Dia em Eletrônicos</div>
+<div class="tip-box"> 👉 Incentive seu público a baixar o app e divulgue ofertas só no app!</div>
+<a class="offer-btn" href="https://www.amazon.com.br/gp/goldbox?bubble-id=AppOnly&linkCode=ll2&tag=vidasustent01-20&linkId=3825c3f1f8305d1538ed462ca9f78478&language=pt_BR&ref_=as_li_ss_tl" target="_blank">Ver Ofertas</a>
 </div>
-<div class="service-card">
-<div class="service-title">📺 Prime Video Channels</div>
-<div class="service-description">Expanda seu entretenimento com canais premium adicionais. HBO, Starzplay, Noggin e muito mais!</div>
-<ul class="service-benefits">
-<li>Canais premium exclusivos</li>
-<li>Controle total das suas assinaturas</li>
-<li>Teste gratuito de 7 dias</li>
-<li>Cancele quando quiser</li>
-</ul>
-<a class="service-link" href="#" target="_blank">Explorar Canais</a>
+<div class="offer-item">
+<div class="offer-title"> 🍎 Segurança Avançada com Apple - Dispositivo protegido contra roubo</div>
+<a class="offer-btn" href="https://www.amazon.com.br/stores/page/1B0F9DB1-6F36-4F2F-BB43-5D222D8DCB3C?ingress=2&lp_context_asin=B0DJFTJ6LX&visitId=96e02fb8-2446-4f69-ab0b-7293c9026648&linkCode=ll2&tag=vidasustent01-20&linkId=7f01a054ee9af932333fe1e17fecdae6&language=pt_BR&ref_=as_li_ss_tl" target="_blank">Conferir Segurança Apple</a>
+</div>
+<div class="offer-item">
+<div class="offer-title"> 💻 PC e Informática na Semana do Home Office</div>
+<a class="offer-btn" href="https://www.amazon.com.br/b?ie=UTF8&node=211000230011&bubble-id=pcseinformatica&linkCode=ll2&tag=vidasustent01-20&linkId=66ecb6a9cec3eab40689388fb1c9f96e&language=pt_BR&ref_=as_li_ss_tl" target="_blank">Ver PC e Informática</a>
+</div>
+<div class="offer-item">
+<div class="offer-title"> 🏠 Semana do Home Office - Tudo para trabalhar em casa</div>
+<a class="offer-btn" href="https://www.amazon.com.br/b?ie=UTF8&node=211000230011&linkCode=ll2&tag=vidasustent01-20&linkId=92fce6ae7e4d25761907a62361227989&language=pt_BR&ref_=as_li_ss_tl" target="_blank">Explorar Home Office</a>
 </div>
 </div>
 </div>
 <div class="category">
-<h2><span class="emoji">🎵</span>Música e Áudio</h2>
+<h2><span class="emoji"> 📚 </span>Recomendações em Livros</h2>
 <div class="offers-grid">
-<div class="service-card">
-<div class="service-title">🎵 Amazon Music Unlimited</div>
-<div class="service-description">Mergulhe em um oceano de música com mais de 100 milhões de músicas em qualidade HD e espacial.</div>
-<ul class="service-benefits">
-<li>Mais de 100 milhões de músicas</li>
-<li>Qualidade de áudio HD e Ultra HD</li>
-<li>Playlists personalizadas com IA</li>
-<li>Modo offline disponível</li>
-</ul>
-<a class="service-link" href="#" target="_blank">Experimentar Agora</a>
+<div class="offer-item">
+<div class="offer-title"> 📖 eBooks Gratuitos e em Oferta por apenas 24h</div>
+<div class="tip-box"> 👉 Encha seu Kindle com ofertas imperdíveis!</div>
+<a class="offer-btn" href="https://www.amazon.com.br/b?node=6311441011&linkCode=ll2&tag=vidasustent01-20&linkId=f3eb32f24ff43c95c9b62e76b30d05f1&language=pt_BR&ref_=as_li_ss_tl" target="_blank">Ver eBooks em Oferta</a>
+</div>
+<div class="offer-item">
+<div class="offer-title"> 🎯 Kindle Unlimited - Ganhe R$15 por nova assinatura!</div>
+<div class="tip-box"> 💡 Você sabia que pode ganhar R$15 a cada nova assinatura gerada pelo seu link?</div>
+<a class="offer-btn" href="https://www.amazon.com.br/kindle-dbs/hz/subscribe/ku?&linkCode=ll2&tag=vidasustent01-20&linkId=b50da8adc751c5b35003a172453b8a35&language=pt_BR&ref_=as_li_ss_tl" target="_blank">Promover Kindle Unlimited</a>
 </div>
 </div>
 </div>
 <div class="category">
-<h2><span class="emoji">📚</span>Leitura Digital</h2>
+<h2><span class="emoji"> 💄 </span>Ofertas em Beleza</h2>
 <div class="offers-grid">
-<div class="service-card">
-<div class="service-title">📚 Kindle Unlimited</div>
-<div class="service-description">Biblioteca ilimitada com mais de 1 milhão de livros, revistas e audiobooks. Leia onde e quando quiser.</div>
-<ul class="service-benefits">
-<li>Mais de 1 milhão de títulos</li>
-<li>Acesso a audiobooks inclusos</li>
-<li>Leia em qualquer dispositivo</li>
-<li>Novos lançamentos mensais</li>
-</ul>
-<a class="service-link" href="#" target="_blank">Começar Leitura Grátis</a>
+<div class="offer-item">
+<div class="offer-title"> ✨ L'Or é al Paris - Compre R$69,90 e leve 15% OFF</div>
+<a class="offer-btn" href="https://www.amazon.com.br/promotion/psp/A30WQ04WIXCO54?redirectAsin=B08PGVNGRZ&redirectMerchantId=A1ZZFT5FULY4LN&linkCode=ll2&tag=vidasustent01-20&linkId=f747794bde9c122dac258cf61d6586be&language=pt_BR&ref_=as_li_ss_tl" target="_blank">Aproveitar Oferta L'Oréal</a>
+</div>
+<div class="offer-item">
+<div class="offer-title"> 🌟 Skin Week - Até 30% OFF em hidratantes (Exclusivo Prime)</div>
+<a class="offer-btn" href="https://www.amazon.com.br/stores/Cetaphil/Cetaphil/page/E1401516-2FCE-4EFC-B54C-5215D34D22C7?pd_rd_w=N26d9&content-id=amzn1.sym.4077d84a-4cd0-4694-8288-613e9d5f955f&pf_rd_p=4077d84a-4cd0-4694-8288-613e9d5f955f&pf_rd_r=3A74PV9DKZXE1BAYMT4N&pd_rd_wg=qZcjQ&pd_rd_r=8d5c09fb-4830-4582-8fc7-c8e52d5dd9ca&linkCode=ll2&tag=vidasustent01-20&linkId=0a01b70304f702fc91747bd34551f667&language=pt_BR&ref_=as_li_ss_tl" target="_blank">Ver Skin Week</a>
 </div>
 </div>
 </div>
 <div class="category">
-<h2><span class="emoji">📦</span>Benefícios Premium</h2>
+<h2><span class="emoji"> 🧽 </span>Limpeza</h2>
+<div class="offers-grid">
+<div class="offer-item">
+<div class="offer-title"> 🌸 Seleção de Downy - Produtos para lavanderia</div>
+<a class="offer-btn" href="https://www.amazon.com.br/stores/Downy/page/BD1AF723-2240-48D0-916C-6E8189B34F0D?lp_asin=B0CS7XK3DX&linkCode=ll2&tag=vidasustent01-20&linkId=921c79d2a612ff82cd5d923009e78cc6&language=pt_BR&ref_=as_li_ss_tl" target="_blank">Ver Produtos Downy</a>
+</div>
+</div>
+</div>
+<div class="category">
+<h2><span class="emoji"> 🏠 </span>Casa e Cozinha</h2>
+<div class="offers-grid">
+<div class="offer-item">
+<div class="offer-title"> 🥤 Blender Ultra Power + Cupom 10% OFF (Exclusivo Prime)</div>
+<a class="offer-btn" href="https://www.amazon.com.br/Blender-Dream-Ros%C3%A9-Jarras-Cadence/dp/B0BNW6NQP3?pf_rd_r=M0BBA185XB9Z20QHG6MF&pf_rd_p=40d78c62-9bcd-46c4-9ee6-91d50c627462&th=1&linkCode=ll1&tag=vidasustent01-20&linkId=ec8545a7d6893ddf0e224e9e3cc417ad&language=pt_BR&ref_=as_li_ss_tl" target="_blank">Ver Blender</a>
+</div>
+<div class="offer-item">
+<div class="offer-title"> 🔪 20% OFF em itens para sua cozinha</div>
+<a class="offer-btn" href="https://www.amazon.com.br/promotion/psp/A488RPBBNK7MT?redirectAsin=B0CT66PRNC&redirectMerchantId=A22JSLOZPR9UM6&linkCode=ll2&tag=vidasustent01-20&linkId=25491b4855aa0bd9b7eb66117df59298&language=pt_BR&ref_=as_li_ss_tl" target="_blank">Ver Itens de Cozinha</a>
+</div>
+<div class="offer-item">
+<div class="offer-title"> 🛀 Economize 5% em Toalhas Profissionais</div>
+<a class="offer-btn" href="https://www.amazon.com.br/promotion/psp/A3A02J8T03B6XC?redirectAsin=B0BHBVF2NT&redirectMerchantId=A27SCRMKXTNOJ0&linkCode=ll2&tag=vidasustent01-20&linkId=4b8c702da9cb0a6a600aae34c11f5070&language=pt_BR&ref_=as_li_ss_tl" target="_blank">Ver Toalhas</a>
+</div>
+</div>
+</div>
+<div class="category">
+<h2><span class="emoji"> 👗 </span>Moda</h2>
+<div class="offers-grid">
+<div class="offer-item">
+<div class="offer-title"> 👙 20% OFF em Moda Íntima</div>
+<a class="offer-btn" href="https://www.amazon.com.br/promotion/psp/A1M3J3AMNEN35N?encoding=UTF8&pf_rd_p=Preview-Of-01867e7a-867e-44b5-b3b0-2c64e595a0bb&pf_rd_r=1RZEWWY8V41B1HMP0XYX&linkCode=ll2&tag=vidasustent01-20&linkId=84df965fad1c1bc654c8fb511ab12439&language=pt_BR&ref_=as_li_ss_tl" target="_blank">Ver Moda Íntima</a>
+</div>
+<div class="offer-item">
+<div class="offer-title"> 👕 30% OFF em todo catálogo Reserva</div>
+<a class="offer-btn" href="https://www.amazon.com.br/promotion/psp/A3SMA80ISXZL63?pf_rd_r=C197647892ED433294AA&pf_rd_p=Preview-Of-9179c966-bf4e-4ee3-9f09-b6edc86c9851&pf_rd_m=A1ZZFT5FULY4LN&pf_rd_s=merchandised-search-5_CW&pf_rd_t=&pf_rd_i=17365811011&redirectAsin=B0CHG3RC4K&redirectMerchantId=A3KBMJFGHIPGG1&linkCode=ll2&tag=vidasustent01-20&linkId=2aece572b414e25f99efa4d901233576&language=pt_BR&ref_=as_li_ss_tl" target="_blank">Ver Catálogo Reserva</a>
+</div>
+<div class="offer-item">
+<div class="offer-title"> 👜 Bolsa Feminina Baú Transversal</div>
+<a class="offer-btn" href="https://www.amazon.com.br/Feminina-Transversal-tamanho-remov%C3%ADvel-Tiracolo/dp/B0DTS89SD2?th=1&linkCode=ll1&tag=vidasustent01-20&linkId=8fb20aa24424c07a8164087df59f00e8&language=pt_BR&ref_=as_li_ss_tl" target="_blank">Ver Bolsa</a>
+</div>
+</div>
+</div>
+<div class="category">
+<h2><span class="emoji"> 🏃 ‍ ♂️ </span>Esportes</h2>
+<div class="offers-grid">
+<div class="offer-item">
+<div class="offer-title"> 🚲 Tudo para Ciclismo</div>
+<a class="offer-btn" href="https://www.amazon.com.br/s?i=outdoor&rh=n%3A17834036011&s=popularity-rank&fs=true&pf_rd_i=17349396011&pf_rd_m=A1ZZFT5FULY4LN&pf_rd_p=3e7bbf09-450a-4da7-bdd5-1478bdb2febf&pf_rd_r=PAWD4NQKYCC0ADE7K0BZ&pf_rd_s=merchandised-search-10&linkCode=ll2&tag=vidasustent01-20&linkId=5d6d9ddb2d74f408c5fb4e3fdacd059d&language=pt_BR&ref_=as_li_ss_tl" target="_blank">Ver Ciclismo</a>
+</div>
+<div class="offer-item">
+<div class="offer-title"> 🏃 ‍ ♀️ Seleção para Corrida</div>
+<a class="offer-btn" href="https://www.amazon.com.br/s?i=sporting&rh=n%3A17834028011&s=popularity-rank&fs=true&pf_rd_i=17349396011&pf_rd_m=A1ZZFT5FULY4LN&pf_rd_p=3e7bbf09-450a-4da7-bdd5-1478bdb2febf&pf_rd_r=PAWD4NQKYCC0ADE7K0BZ&pf_rd_s=merchandised-search-10&linkCode=ll2&tag=vidasustent01-20&linkId=7c541713f5133006059741a560847794&language=pt_BR&ref_=as_li_ss_tl" target="_blank">Ver Corrida</a>
+</div>
+<div class="offer-item">
+<div class="offer-title"> 🏋️‍ ♀️ Tudo para Fitness</div>
+<a class="offer-btn" href="https://www.amazon.com.br/s?i=sporting&rh=n%3A17834033011%2Cn%3A17834038011%2Cn%3A17834039011&s=popularity-rank&fs=true&pf_rd_i=17349396011&pf_rd_m=A1ZZFT5FULY4LN&pf_rd_p=3e7bbf09-450a-4da7-bdd5-1478bdb2febf&pf_rd_r=PAWD4NQKYCC0ADE7K0BZ&pf_rd_s=merchandised-search-10&linkCode=ll2&tag=vidasustent01-20&linkId=c10f813c9e99c1d0449d034789643d2c&language=pt_BR&ref_=as_li_ss_tl" target="_blank">Ver Fitness</a>
+</div>
+</div>
+</div>
+<div class="category">
+<h2><span class="emoji"> 👶 </span>Bebê</h2>
+<div class="offers-grid">
+<div class="offer-item">
+<div class="offer-title"> 🍼 Fraldas Pampers</div>
+<a class="offer-btn" href="https://www.amazon.com.br/s?k=fraldas+pampers&crid=2B3B3B3B3B3B3B3B3&sprefix=fraldas+pampers&ref=nb_sb_noss&linkCode=ll2&tag=vidasustent01-20&linkId=7706d86a603c4f74d0d0f55e511488c5&language=pt_BR&ref_=as_li_ss_tl" target="_blank">Ver Fraldas Pampers</a>
+</div>
+</div>
+</div>
+<div class="section-divider">
+        SERVIÇOS
+    </div>
+<div class="category">
+<h2><span class="emoji"> 🎬 </span>Amazon Prime Video</h2>
 <div class="offers-grid">
 <div class="service-card">
-<div class="service-title">📦 Amazon Prime</div>
-<div class="service-description">O pacote completo! Frete grátis ilimitado, Prime Video, Prime Music e muito mais em uma única assinatura.</div>
+<div class="service-title"> 🎁 Teste Grátis Prime Video por 30 Dias!</div>
+<p class="service-description"> Aproveite filmes, séries e esportes ao vivo. Cancele quando quiser.</p>
 <ul class="service-benefits">
-<li>Frete GRÁTIS e rápido</li>
-<li>Prime Video incluído</li>
-<li>Prime Music com 2 milhões de músicas</li>
-<li>Ofertas exclusivas Prime Day</li>
+<li>✓ Assista no celular, tablet, smart TV ou no seu console.</li>
+<li>✓ Conteúdo exclusivo e filmes recém-saídos do cinema.</li>
+<li>✓ Perfeito para quem busca entretenimento de alta qualidade.</li>
 </ul>
-<a class="service-link" href="#" target="_blank">Ativar Prime Grátis</a>
+<a class="service-link" href="https://www.amazon.com.br/gp/video/primesignup?tag=vidasustent01-20&linkCode=ur2&linkId=f2113333333333333333333333333333333333&camp=1789&creative=9325" target="_blank">Assinar Agora</a>
 </div>
 <div class="service-card">
-<div class="service-title">👶 Lista do Bebê Amazon</div>
-<div class="service-description">Prepare-se para a chegada do seu bebê com descontos especiais e lista de desejos personalizada.</div>
+<div class="service-title"> 📺 Channels - Assinatura Amazon</div>
+<p class="service-description"> Tenha acesso a canais extras como Paramount+ e Telecine, tudo dentro do Prime Video.</p>
+<a class="service-link" href="https://www.amazon.com.br/gp/video/offers/channel-signup?tag=vidasustent01-20&linkCode=ur2&linkId=3b33333333333333333333333333333333333&camp=1789&creative=9325" target="_blank">Ver Canais</a>
+</div>
+</div>
+</div>
+<div class="category">
+<h2><span class="emoji"> 🎶 </span>Amazon Music</h2>
+<div class="offers-grid">
+<div class="service-card">
+<div class="service-title"> 🎧 Amazon Music - Teste Grátis por 30 dias</div>
+<p class="service-description"> Mais de 100 milhões de músicas e podcasts sem anúncios.</p>
 <ul class="service-benefits">
-<li>Descontos exclusivos em produtos para bebês</li>
-<li>Lista compartilhável com família</li>
-<li>Recomendações personalizadas</li>
-<li>Frete grátis em compras elegíveis</li>
+<li>✓ Ouça suas músicas offline e pule as faixas à vontade.</li>
+<li>✓ Descubra artistas e playlists personalizadas.</li>
 </ul>
-<a class="service-link" href="#" target="_blank">Criar Lista Gratuita</a>
+<a class="service-link" href="https://www.amazon.com.br/music/unlimited?tag=vidasustent01-20&linkCode=ur2&linkId=5a1111111111111111111111111111111111&camp=1789&creative=9325" target="_blank">Começar a Ouvir</a>
 </div>
 </div>
 </div>
-<div class="urgency-banner">
-<h3>⏰ Última Chance - Comece Hoje Mesmo!</h3>
-<p>Milhões de pessoas já descobriram. Não perca tempo, teste agora gratuitamente!</p>
+<div class="category">
+<h2><span class="emoji"> 🎁 </span>Amazon Prime</h2>
+<div class="offers-grid">
+<div class="service-card">
+<div class="service-title"> 🚚 Amazon Prime - Teste Grátis por 30 dias</div>
+<p class="service-description"> Ofereça frete grátis e rápido em milhões de produtos. O teste gratuito inclui acesso ao Prime Video e Music.</p>
+<a class="service-link" href="https://www.amazon.com.br/prime?tag=vidasustent01-20&linkCode=ur2&linkId=2c9333333333333333333333333333333333&camp=1789&creative=9325" target="_blank">Conhecer Amazon Prime</a>
+</div>
+</div>
+</div>
+<div class="category">
+<h2><span class="emoji"> 🛍️ </span>Amazon Empresas</h2>
+<div class="offers-grid">
+<div class="service-card">
+<div class="service-title"> 💼 Amazon Business</div>
+<p class="service-description"> Gerencie compras para sua empresa de forma simplificada, com preços e descontos exclusivos.</p>
+<ul class="service-benefits">
+<li>✓ Frete grátis e rápido em milhões de produtos elegíveis.</li>
+<li>✓ Análises e relatórios de gastos detalhados.</li>
+<li>✓ Ferramentas de gerenciamento de múltiplos usuários.</li>
+</ul>
+<a class="service-link" href="https://www.amazon.com.br/b2b/reg?ref_=ab_reg_ref_ac_gw_c1&tag=vidasustent01-20&linkCode=ur2&linkId=0633333333333333333333333333333333333&camp=1789&creative=9325" target="_blank">Cadastrar Empresa</a>
+</div>
+</div>
+</div>
+<div class="category">
+<h2><span class="emoji"> 👶 </span>Lista do Bebê</h2>
+<div class="offers-grid">
+<div class="service-card">
+<div class="service-title"> 👶 Crie sua Lista do Bebê!</div>
+<p class="service-description"> Crie uma lista de presentes para o seu chá de bebê e ganhe descontos e benefícios exclusivos!</p>
+<a class="service-link" href="https://www.amazon.com.br/gp/registry/baby/?tag=vidasustent01-20&linkCode=ur2&linkId=b7310b80587747e9089531818274d812&camp=1789&creative=9325" target="_blank">Criar Lista do Bebê</a>
+</div>
+</div>
+</div>
 </div>
 <footer>
-<p>💡 <strong>Dica:</strong> Todos os links são de afiliado otimizados para conversão</p>
-<p>Aproveite as ofertas e maximize seus ganhos como afiliado Amazon!</p>
-<p style="margin-top: 20px; font-size: 0.9em;">🔗 Links atualizados e verificados - Vida Sustentável</p>
-</footer>
+<p>
+<a href="#" style="color: inherit; text-decoration: none;">Política de Privacidade</a> | <a href="#" style="color: inherit; text-decoration: none;">Termos de Uso</a>
+</p>
+<div class="social-icons">
+<a href="https://www.youtube.com/@vidasustentavel_" target="_blank">▶️</a>
+<a href="https://www.instagram.com/vidasustentavel_oficial/" target="_blank">📸</a>
+<a href="https://www.tiktok.com/@vidasustentavel_oficial" target="_blank">🎵</a>
 </div>
+</footer>
 <script>
         // Smooth scrolling para links internos
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
